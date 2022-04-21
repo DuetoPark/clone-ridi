@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/DuetoPark/clone-ridi#readme",
   "dependencies": {
-    "node-sass": "^7.0.1"
+    "node-sass": "^7.0.1",
+    "sass-lint": "^1.13.1"
   }
 }
