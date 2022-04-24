@@ -1,0 +1,73 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: $font-main;
+  color: $primary;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+  font-family: $font-main;
+}
+
+h1,
+h2,
+h3 {
+  padding: 0;
+  margin: 0;
+  font-weight: 400;
+}
+
+strong {
+  font-weight: 400;
+}
+
+ol,
+ul,
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a,
+button {
+  font-family: $font-main;
+  cursor: pointer;
+}
+
+a {
+  color: $primary;
+  text-decoration: none;
+}
+
+input,
+textarea,
+button,
+select {
+  padding: 0;
+  color: $primary;
+  background-color: transparent;
+  border: 0;
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+address {
+  font-style: normal;
+}
+
+i {
+  pointer-events: none;
+}
