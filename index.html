@@ -9,6 +9,113 @@
     <meta name="description" content="인터렉션 집중 페이지!" />
 
     <title>도서추천 - 리디</title>
+
+    <link rel="stylesheet" href="./style.css" />
   </head>
-  <body></body>
+  <body>
+    <!-- !!!!!!!!!!########## 전체 페이지 영역 시작 ##########!!!!!!!!!! -->
+    <!-- ########## GNB 영역 시작 ########## -->
+    <header class="gnb">
+      <!-- %%%%%%%%%% GNB-TOP 영역 시작 %%%%%%%%%% -->
+      <div class="gnb-top">
+        <div class="container">
+          <nav class="gnb-nav">
+            <h1 class="visually-hidden">메뉴</h1>
+
+            <ul class="menu-list">
+              <li class="menu-item">
+                <a href="./index.html">웹툰/만화</a>
+              </li>
+              <li class="menu-item">
+                <a href="./index.html">웹소설</a>
+              </li>
+              <li class="menu-item is-active">
+                <a href="./index.html">도서</a>
+              </li>
+              <li class="menu-item">
+                <a href="./index.html">
+                  셀렉트
+                  <i class="ic-chevron" aria-label="더보기"></i>
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="sm-hidden gnb-auth">
+            <a class="btn-ghost" href="./index.html">회원가입</a>
+            <a class="btn-ghost" href="./index.html">로그인</a>
+          </div>
+        </div>
+      </div>
+      <!-- %%%%%%%%%% GNB-TOP 영역 끝 %%%%%%%%%% -->
+
+      <!-- %%%%%%%%%% GNB-BOTTOM 영역 시작 %%%%%%%%%% -->
+      <div class="gnb-bottom">
+        <div class="container">
+          <h1 class="logo">
+            <a href="./index.html" aria-label="리디 홈으로 이동">
+              <img src="./assets/Logo-ridi.svg" alt="리디" />
+              <img src="./assets/Logo-books.svg" alt="북스" />
+            </a>
+          </h1>
+
+          <div class="sm-only gnb-auth">
+            <a href="./index.html">로그인</a>
+          </div>
+
+          <form class="search-form">
+            <div class="input-group">
+              <input type="text" placeholder="검색어를 입력하세요" />
+              <i class="ic-search" aria-hidden="true"></i>
+            </div>
+            <button
+              class="delete-button"
+              type="button"
+              aria-label="검색어 삭제"
+            >
+              <i class="ic-delete" aria-hidden="true"></i>
+            </button>
+          </form>
+
+          <div class="sm-hidden link-group">
+            <a
+              class="gnb-icon-button btn-40 btn-primary"
+              href="./index.html"
+              aria-label="알림"
+            >
+              <i class="ic-bell" aria-hidden="true"></i>
+            </a>
+
+            <a
+              class="gnb-icon-button btn-40 btn-primary"
+              href="./index.html"
+              aria-label="장바구니"
+            >
+              <i class="ic-cart" aria-hidden="true"></i>
+            </a>
+
+            <a
+              class="gnb-icon-button btn-40 btn-primary"
+              href="./index.html"
+              aria-label="내 서제"
+            >
+              <i class="ic-book" aria-hidden="true"></i>
+            </a>
+
+            <a
+              class="gnb-icon-button btn-40 btn-primary"
+              href="./index.html"
+              aria-label="마이리디"
+            >
+              <i class="ic-user" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- %%%%%%%%%% GNB-BOTTOM 영역 끝 %%%%%%%%%% -->
+    </header>
+    <!-- ########## GNB 영역 끝 ########## -->
+
+    <!-- !!!!!!!!!!########## 전체 페이지 영역 끝 ##########!!!!!!!!!! -->
+  </body>
 </html>
