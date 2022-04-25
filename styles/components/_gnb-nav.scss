@@ -1,0 +1,79 @@
+.gnb-nav {
+  .menu-list {
+    @include flexbox(start);
+  }
+
+  .menu-item {
+    width: 25%;
+    text-align: center;
+
+    &.is-active > a {
+      pointer-events: none;
+      opacity: 1;
+    }
+  }
+
+  a {
+    @include text-style(14);
+    display: inline-block;
+    padding: 13px;
+    padding-bottom: 11px;
+    font-weight: 700;
+    color: $white;
+    white-space: nowrap;
+    opacity: 0.4;
+
+    .ic-chevron {
+      position: relative;
+      top: -1px;
+      left: -3px;
+      font-size: 8px;
+      color: $white;
+    }
+
+    &:active {
+      opacity: 1;
+    }
+  }
+
+  @include responsive('T') {
+    .menu-item {
+      @include flexbox;
+      width: auto;
+
+      &:not(:last-child)::after {
+        position: relative;
+        top: 1px;
+        display: block;
+        width: 3px;
+        height: 3px;
+        background-color: $background;
+        content: '';
+      }
+
+      &.is-active > a {
+        color: $primary;
+      }
+    }
+
+    a {
+      padding: 12px;
+      padding-bottom: 10px;
+      color: $secondary;
+      opacity: 1;
+      transition: opacity 150ms ease-in-out;
+
+      &:hover {
+        opacity: 0.6;
+      }
+
+      .ic-chevron {
+        position: relative;
+        top: -1px;
+        left: -3px;
+        font-size: 8px;
+        color: $secondary;
+      }
+    }
+  }
+}

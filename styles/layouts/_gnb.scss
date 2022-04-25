@@ -1,0 +1,134 @@
+.gnb {
+  &-top {
+    height: 40px;
+    background-color: $black;
+  }
+
+  &-bottom {
+    position: relative;
+    padding-top: 9px;
+    padding-bottom: 6px;
+
+    &::before,
+    &::after {
+      @include pos-center-x;
+      top: 0;
+      display: block;
+      width: 100vw;
+      height: 16px;
+      content: '';
+    }
+
+    &::before {
+      background-color: $black;
+    }
+
+    &::after {
+      background-color: $white;
+      border-top-right-radius: 16px;
+      border-top-left-radius: 16px;
+    }
+
+    .container {
+      @include flexbox(between);
+      position: relative;
+      flex-wrap: wrap;
+    }
+  }
+
+  .logo {
+    margin-left: -16px;
+
+    a {
+      @include inline-flexbox(start);
+      padding: 13px 16px 14px 16px;
+    }
+
+    img {
+      width: auto;
+      height: 15px;
+
+      &:first-child {
+        margin-right: 5px;
+      }
+    }
+  }
+
+  .search-form {
+    padding-top: 9px;
+    padding-bottom: 5px;
+  }
+
+  @include responsive('T') {
+    &-top {
+      background-color: transparent;
+      border-bottom: 1px solid $border;
+
+      .container {
+        @include flexbox(between);
+
+        .gnb-nav {
+          margin-left: -12px;
+        }
+
+        .gnb-auth {
+          margin-right: -12px;
+        }
+      }
+    }
+
+    &-bottom {
+      padding: 16px 0;
+
+      &::before,
+      &::after {
+        display: none;
+      }
+
+      .container {
+        flex-wrap: nowrap;
+      }
+    }
+
+    .logo {
+      flex-grow: 1;
+      margin-left: -8px;
+
+      a {
+        padding: 8px;
+        padding-bottom: 9px;
+      }
+
+      img {
+        height: 23px;
+
+        &:not(:last-child) {
+          margin-right: 6px;
+        }
+      }
+    }
+
+    .search-form {
+      width: 260px;
+      padding: 0;
+      margin-right: 8px;
+    }
+
+    .link-group {
+      @include flexbox(end);
+      margin-right: -14px;
+
+      .gnb-icon-button {
+        position: relative;
+        top: 1px;
+        width: 40px;
+        margin: 0 6px;
+        border-radius: 50%;
+
+        i {
+          font-size: 28px;
+        }
+      }
+    }
+  }
+}
