@@ -1,0 +1,131 @@
+.footer-info {
+  .details {
+    overflow: hidden;
+
+    &.is-open {
+      .details-control-button > .ic-chevron {
+        transform: rotate(-90deg);
+      }
+
+      dl {
+        max-height: 100px;
+        margin-bottom: 10px;
+      }
+    }
+
+    .details-control-button {
+      @include text-style(11);
+      margin-bottom: 10px;
+      font-weight: 700;
+      color: $secondary;
+
+      .ic-chevron {
+        position: relative;
+        left: -1px;
+        display: inline-block;
+        font-size: 8px;
+        color: $secondary;
+        transform: rotate(90deg);
+        transition: transform 150ms ease-in-out;
+      }
+    }
+
+    dl {
+      @include flexbox(start);
+      flex-wrap: wrap;
+      max-width: 310px;
+      max-height: 0;
+      margin-left: -13px;
+      overflow: hidden;
+      transition: max-height 200ms ease-in-out;
+
+      div {
+        @include flexbox(start);
+        font-size: 10px;
+        line-height: 18px;
+
+        &::before {
+          display: inline-block;
+          width: 1px;
+          height: 9px;
+          margin: 2px 6px;
+          background: $border;
+          content: '';
+        }
+      }
+
+      dt,
+      dd {
+        color: $secondary;
+      }
+
+      dt {
+        margin-right: 3.6px;
+        white-space: nowrap;
+      }
+
+      a {
+        color: $secondary;
+
+        &:hover {
+          color: $primary;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .policy {
+    @include flexbox(start);
+
+    .btn-ghost {
+      @include flexbox(start);
+      font-size: 10px;
+      line-height: 18px;
+      letter-spacing: -0.01em;
+
+      &:not(:last-child)::after {
+        display: block;
+        width: 1px;
+        height: 9px;
+        margin: 2px 6px;
+        background: $border;
+        content: '';
+      }
+    }
+  }
+
+  .copyright {
+    > * {
+      font-size: 10px;
+      line-height: 18px;
+      letter-spacing: -0.01em;
+      color: $secondary;
+    }
+  }
+
+  @include responsive('T') {
+    .details {
+      &.is-open {
+        dl {
+          max-height: 100px;
+          margin-bottom: 3px;
+        }
+      }
+
+      .details-control-button {
+        @include text-style(12);
+      }
+
+      dl {
+        max-width: 520px;
+      }
+    }
+
+    .copyright {
+      > * {
+        font-weight: 700;
+      }
+    }
+  }
+}

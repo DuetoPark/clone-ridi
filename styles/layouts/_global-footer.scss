@@ -1,0 +1,166 @@
+.global-footer {
+  $nav-link-padding-sm: 7px;
+  $nav-link-padding-md: 6px;
+
+  $padding-top-md: 42px;
+
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  border-top: 1px solid $border;
+
+  .link-list.sm-only,
+  .footer-nav > .nav-main {
+    @include flexbox;
+    @include text-style(13);
+    width: 100%;
+    margin-bottom: 30px;
+    font-weight: 700;
+    white-space: nowrap;
+
+    .link-item {
+      width: 50%;
+    }
+
+    .btn-ghost {
+      @include inline-flexbox(start);
+
+      i {
+        margin-right: 6px;
+        font-size: 24px;
+        color: $secondary;
+      }
+    }
+  }
+
+  .footer-nav {
+    @include column-flexbox;
+    flex-wrap: wrap;
+    max-height: 240px;
+
+    .nav-service,
+    .nav-inquiry,
+    .nav-company {
+      width: 50%;
+
+      .title {
+        @include text-style(12);
+        margin-bottom: 16px;
+        font-weight: 700;
+        color: $secondary;
+      }
+
+      .link-list {
+        margin-top: -#{$nav-link-padding-sm};
+      }
+
+      .btn-ghost {
+        @include text-style(12);
+        display: block;
+        padding: $nav-link-padding-sm 0;
+
+        .badge.is-new {
+          @include inline-flexbox;
+          width: 14px;
+          height: 14px;
+          font-size: 3px;
+          color: $white;
+          background-color: $blue;
+          border-radius: 50%;
+        }
+      }
+    }
+
+    .nav-company {
+      margin-top: 30px - $nav-link-padding-sm;
+    }
+  }
+
+  .footer-info {
+    margin-top: 55px - $nav-link-padding-sm;
+    margin-bottom: 20px;
+  }
+
+  .footer-contact {
+    @include flexbox(start);
+
+    .btn-outlined {
+      width: 44px;
+      border-radius: 50%;
+
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+
+      i {
+        font-size: 24px;
+        color: inherit;
+      }
+    }
+  }
+
+  @include responsive('T') {
+    padding-top: 42px;
+    padding-bottom: 20px;
+
+    .footer-nav {
+      align-items: start;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      width: calc(100% - 160px);
+      max-height: auto;
+
+      .nav-main {
+        flex-grow: 0;
+        flex-shrink: 0;
+        justify-content: flex-start;
+        width: 185px;
+        margin: 0;
+        text-align: left;
+
+        .link-item {
+          width: auto;
+
+          &:not(:last-child) {
+            margin-bottom: 20px;
+          }
+        }
+      }
+
+      .nav-service,
+      .nav-inquiry,
+      .nav-company {
+        width: 33%;
+
+        .title {
+          @include text-style(13);
+          padding: 4px 0;
+          margin-bottom: 12px;
+        }
+
+        .link-list {
+          margin-top: -#{$nav-link-padding-md};
+        }
+
+        .btn-ghost {
+          @include text-style(13);
+          padding: $nav-link-padding-md 0;
+        }
+      }
+
+      .nav-company {
+        margin: 0;
+      }
+    }
+
+    .footer-info {
+      margin-top: 60px - $nav-link-padding-md;
+    }
+
+    .footer-contact {
+      position: absolute;
+      top: $padding-top-md;
+      right: $md-margin;
+    }
+  }
+}
