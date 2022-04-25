@@ -1,0 +1,48 @@
+%tag-base {
+  @include flexbox;
+  width: 28px;
+  height: 28px;
+  color: $white;
+
+  img {
+    width: auto;
+    height: 100%;
+  }
+}
+
+// NOTE: Tag
+.tag-red {
+  @extend %tag-base;
+  background-color: $red;
+}
+
+.tag-gray {
+  @extend %tag-base;
+  background-color: $secondary;
+}
+
+.tag-wrapper {
+  @include inline-flexbox(start);
+  overflow: hidden;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+// NOTE: Badge
+.badge-white {
+  @include inline-flexbox;
+  height: 22px;
+  overflow: hidden;
+  border: 1px solid $white;
+  border-radius: 2px;
+
+  img {
+    width: auto;
+    height: 100%;
+    border-right: 1px solid $white;
+
+    &:last-child {
+      border: 0;
+    }
+  }
+}
