@@ -1,0 +1,52 @@
+%btn-base {
+  @include flexbox;
+  display: block;
+  padding: 0 4px;
+}
+
+// NOTE: Size
+.btn-40 {
+  @extend %btn-base;
+  height: 40px;
+}
+
+.btn-44 {
+  @extend %btn-base;
+  height: 44px;
+}
+
+// note: Style
+.btn-primary {
+  color: $primary;
+  background-color: transparent;
+  transition: background-color 150ms ease-in-out;
+
+  &:active,
+  &:hover {
+    background-color: $background;
+  }
+}
+
+.btn-outlined {
+  color: $secondary;
+  background-color: transparent;
+  border: 1px solid $background;
+  transition: all 150ms ease-in-out;
+
+  &:active,
+  &:hover {
+    color: $primary;
+    border-color: $secondary;
+  }
+}
+
+.btn-ghost {
+  color: $secondary;
+  background-color: transparent;
+  transition: opacity 150ms ease-in-out;
+
+  &:active,
+  &:hover {
+    opacity: 0.6;
+  }
+}
