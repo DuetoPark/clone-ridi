@@ -33,6 +33,12 @@ li {
   list-style: none;
 }
 
+dl,
+dt,
+dd {
+  color: inherit;
+}
+
 a,
 button {
   font-family: $font-main;
@@ -40,7 +46,7 @@ button {
 }
 
 a {
-  color: $primary;
+  color: inherit;
   text-decoration: none;
 }
 
@@ -49,7 +55,7 @@ textarea,
 button,
 select {
   padding: 0;
-  color: $primary;
+  color: inherit;
   background-color: transparent;
   border: 0;
 
@@ -69,5 +75,6 @@ address {
 }
 
 i {
+  color: inherit;
   pointer-events: none;
 }

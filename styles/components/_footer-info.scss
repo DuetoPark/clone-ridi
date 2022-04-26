@@ -24,7 +24,6 @@
         left: -1px;
         display: inline-block;
         font-size: 8px;
-        color: $secondary;
         transform: rotate(90deg);
         transition: transform 150ms ease-in-out;
       }
@@ -43,6 +42,7 @@
         @include flexbox(start);
         font-size: 10px;
         line-height: 18px;
+        color: $secondary;
 
         &::before {
           display: inline-block;
@@ -54,23 +54,14 @@
         }
       }
 
-      dt,
-      dd {
-        color: $secondary;
-      }
-
       dt {
         margin-right: 3.6px;
         white-space: nowrap;
       }
 
-      a {
-        color: $secondary;
-
-        &:hover {
-          color: $primary;
-          text-decoration: underline;
-        }
+      a:hover {
+        color: $primary;
+        text-decoration: underline;
       }
     }
   }
@@ -95,13 +86,11 @@
     }
   }
 
-  .copyright {
-    > * {
-      font-size: 10px;
-      line-height: 18px;
-      letter-spacing: -0.01em;
-      color: $secondary;
-    }
+  .copyright > * {
+    font-size: 10px;
+    line-height: 18px;
+    letter-spacing: -0.01em;
+    color: $secondary;
   }
 
   @include responsive('T') {
@@ -122,10 +111,8 @@
       }
     }
 
-    .copyright {
-      > * {
-        font-weight: 700;
-      }
+    .copyright > * {
+      font-weight: 700;
     }
   }
 }
