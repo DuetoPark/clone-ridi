@@ -1,0 +1,43 @@
+.lnb {
+  @include flexbox(between);
+  position: relative;
+  width: 100%;
+  height: 44px;
+
+  .title {
+    @include text-style(16);
+    font-weight: 700;
+    color: $blue;
+  }
+
+  .category-button {
+    @include flexbox(center);
+    width: 44px;
+    margin-right: -12px;
+    font-size: 24px;
+    color: $primary;
+  }
+
+  @include responsive('T') {
+    height: 60px;
+    border-bottom: 1px solid $border-light;
+
+    .title {
+      @include text-style(24);
+    }
+
+    .category-button {
+      @include flexbox(start);
+      @include text-style(14);
+      width: auto;
+      padding: 12px 8px;
+      margin-right: -8px;
+      font-weight: 700;
+
+      .ic-menu {
+        margin-right: 6px;
+        font-size: 26px;
+      }
+    }
+  }
+}
