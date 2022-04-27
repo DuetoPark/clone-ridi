@@ -9,8 +9,14 @@
     <meta name="description" content="인터렉션 집중 페이지!" />
 
     <title>도서추천 - 리디</title>
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css"
+    />
     <link rel="stylesheet" href="./style.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <script type="module" src="./js/slider.js" defer></script>
   </head>
   <body>
     <!-- !!!!!!!!!!########## 전체 페이지 영역 시작 ##########!!!!!!!!!! -->
@@ -127,6 +133,365 @@
         </a>
       </header>
       <!-- %%%%%%%%%% LNB 영역 끝 %%%%%%%%%% -->
+
+      <!-- %%%%%%%%%% 이벤트 배너 섹션 시작 %%%%%%%%%% -->
+      <section class="banner" role="region">
+        <h1 class="visually-hidden">리디북스 이벤트 배너</h1>
+
+        <div class="banner-category">
+          <h3 class="visually-hidden">배너 카테고리</h3>
+
+          <ul class="category-list">
+            <li class="category-item is-active">
+              <button class="btn-ghost" type="button">추천</button>
+            </li>
+            <li class="category-item">
+              <button class="btn-ghost" type="button">
+                리디<span lang="en">ONLY</span>
+              </button>
+            </li>
+            <li class="category-item">
+              <button class="btn-ghost" type="button">이벤트</button>
+            </li>
+            <li class="category-item">
+              <button class="btn-ghost" type="button">대여</button>
+            </li>
+          </ul>
+        </div>
+
+        <div class="banner-carousel">
+          <ol class="slider-list">
+            <li class="slider-item">
+              <a class="banner-card" href="./index.html">
+                <figure class="banner-image">
+                  <img src="./assets/images/img-banner-01.jpg" alt="" />
+                  <figcaption class="visually-hidden">
+                    리디북스 이벤트 배너 이미지 1
+                  </figcaption>
+                </figure>
+
+                <div
+                  class="banner-content"
+                  style="
+                    background-image: linear-gradient(
+                      to bottom,
+                      rgba(30, 129, 72, 0),
+                      rgba(30, 129, 72, 1)
+                    );
+                  "
+                >
+                  <div class="badge-white">
+                    <img
+                      src="https://active.ridibooks.com/badge/carousel/select.848770918f11929ede6eb2ffc2e36353.png"
+                      alt="셀렉트"
+                    />
+                  </div>
+
+                  <h2 class="title">우리가 좋아서 하는 지구에 대한 이야기</h2>
+                  <p class="desc">리디셀렉트에서 만나는 &lt;어스 라이크&gt;</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="slider-item">
+              <a class="banner-card" href="./index.html">
+                <figure class="banner-image">
+                  <img src="./assets/images/img-banner-02.jpg" alt="" />
+                  <figcaption class="visually-hidden">
+                    리디북스 이벤트 배너 이미지 2
+                  </figcaption>
+                </figure>
+
+                <div
+                  class="banner-content"
+                  style="
+                    background-image: linear-gradient(
+                      to bottom,
+                      rgba(30, 55, 49, 0),
+                      rgba(30, 55, 49, 1)
+                    );
+                  "
+                >
+                  <h2 class="title" lang="en">EVERY DAY EARTH DAY</h2>
+                  <p class="desc">4/22 지구의 날 친환경 도서전</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="slider-item">
+              <a class="banner-card" href="./index.html">
+                <figure class="banner-image">
+                  <img src="./assets/images/img-banner-03.jpg" alt="" />
+                  <figcaption class="visually-hidden">
+                    리디북스 이벤트 배너 이미지 3
+                  </figcaption>
+                </figure>
+
+                <div
+                  class="banner-content"
+                  style="
+                    background-image: linear-gradient(
+                      to bottom,
+                      rgba(208, 208, 208, 0),
+                      rgba(208, 208, 208, 1)
+                    );
+                  "
+                >
+                  <h2 class="title">
+                    리디페이퍼4<br />
+                    예약 판매 오픈
+                  </h2>
+                  <p class="desc">4월 13일 오전 11시 ~ 4월 25일 자정</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="slider-item">
+              <a class="banner-card" href="./index.html">
+                <figure class="banner-image">
+                  <img src="./assets/images/img-banner-04.jpg" alt="" />
+                  <figcaption class="visually-hidden">
+                    리디북스 이벤트 배너 이미지 4
+                  </figcaption>
+                </figure>
+
+                <div
+                  class="banner-content"
+                  style="
+                    background-image: linear-gradient(
+                      to bottom,
+                      rgba(12, 21, 54, 0),
+                      rgba(12, 21, 54, 1)
+                    );
+                  "
+                >
+                  <h2 class="title">
+                    가불로 얻은 성장,<br />
+                    이제는 갚아야 할 시간이다!
+                  </h2>
+                  <p class="desc">연대와 공존, 사회권 선진국을 위한 제언</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="slider-item">
+              <a class="banner-card" href="./index.html">
+                <figure class="banner-image">
+                  <img src="./assets/images/img-banner-05.jpg" alt="" />
+                  <figcaption class="visually-hidden">
+                    리디북스 이벤트 배너 이미지 5
+                  </figcaption>
+                </figure>
+
+                <div
+                  class="banner-content"
+                  style="
+                    background-image: linear-gradient(
+                      to bottom,
+                      rgba(13, 27, 71, 0),
+                      rgba(13, 27, 71, 1)
+                    );
+                  "
+                >
+                  <div class="badge-white">
+                    <img
+                      src="https://active.ridibooks.com/badge/carousel/discount_50.f6180d600f2b25f5813c1c7dd4d2f82d.png"
+                      alt="50% 할인"
+                    />
+                  </div>
+
+                  <h2 class="title">
+                    작가정신<br />
+                    35주년 이벤트
+                  </h2>
+                  <p class="desc">3천원 특가 포함 전 종 반값 대여!</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="slider-item">
+              <a class="banner-card" href="./index.html">
+                <figure class="banner-image">
+                  <img src="./assets/images/img-banner-06.jpg" alt="" />
+                  <figcaption class="visually-hidden">
+                    리디북스 이벤트 배너 이미지 6
+                  </figcaption>
+                </figure>
+
+                <div
+                  class="banner-content"
+                  style="
+                    background-image: linear-gradient(
+                      to bottom,
+                      rgba(4, 189, 178, 0),
+                      rgba(4, 189, 178, 1)
+                    );
+                  "
+                >
+                  <div class="badge-white">
+                    <img
+                      src="https://active.ridibooks.com/badge/carousel/select.848770918f11929ede6eb2ffc2e36353.png"
+                      alt="셀렉트"
+                      aria-label="리디 셀렉트"
+                    />
+                  </div>
+
+                  <h2 class="title">
+                    리디셀렉트<br />
+                    4월 업데이트 공개!
+                  </h2>
+                  <p class="desc">
+                    새로운 도서들의 업데이트 일정을 미리 확인하세요
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="slider-item">
+              <a class="banner-card" href="./index.html">
+                <figure class="banner-image">
+                  <img src="./assets/images/img-banner-07.jpg" alt="" />
+                  <figcaption class="visually-hidden">
+                    리디북스 이벤트 배너 이미지 7
+                  </figcaption>
+                </figure>
+
+                <div
+                  class="banner-content"
+                  style="
+                    background-image: linear-gradient(
+                      to bottom,
+                      rgba(151, 132, 38, 0),
+                      rgba(151, 132, 38, 1)
+                    );
+                  "
+                >
+                  <div class="badge-group">
+                    <img
+                      src="https://active.ridibooks.com/badge/carousel/discount_50.f6180d600f2b25f5813c1c7dd4d2f82d.png"
+                      alt="50% 할인"
+                    />
+                  </div>
+
+                  <h2 class="title">
+                    J.R.R.톨킨 세계관의 정수<br />
+                    개정 완역판!
+                  </h2>
+                  <p class="desc">&lt;실마릴리온&gt; 세트 출간 이벤트</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="slider-item">
+              <a class="banner-card" href="./index.html">
+                <figure class="banner-image">
+                  <img src="./assets/images/img-banner-08.jpg" alt="" />
+                  <figcaption class="visually-hidden">
+                    리디북스 이벤트 배너 이미지 8
+                  </figcaption>
+                </figure>
+
+                <div
+                  class="banner-content"
+                  style="
+                    background-image: linear-gradient(
+                      to bottom,
+                      rgba(218, 114, 37, 0),
+                      rgba(218, 114, 37, 1)
+                    );
+                  "
+                >
+                  <h2 class="title">남편도, 이웃도 경찰까지 모두 이상하다</h2>
+                  <p class="desc">
+                    주변의 모든 사람이 의심스럽다. 심지어 나조차
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="slider-item">
+              <a class="banner-card" href="./index.html">
+                <figure class="banner-image">
+                  <img src="./assets/images/img-banner-09.jpg" alt="" />
+                  <figcaption class="visually-hidden">
+                    리디북스 이벤트 배너 이미지 9
+                  </figcaption>
+                </figure>
+
+                <div
+                  class="banner-content"
+                  style="
+                    background-image: linear-gradient(
+                      to bottom,
+                      rgba(84, 154, 198, 0),
+                      rgba(84, 154, 198, 1)
+                    );
+                  "
+                >
+                  <h2 class="title">가치 있는 인생 만드는 법</h2>
+                  <p class="desc">변증법적 행동치료사의 실질적 조언</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="slider-item">
+              <a class="banner-card" href="./index.html">
+                <figure class="banner-image">
+                  <img src="./assets/images/img-banner-10.jpg" alt="" />
+                  <figcaption class="visually-hidden">
+                    리디북스 이벤트 배너 이미지 10
+                  </figcaption>
+                </figure>
+
+                <div
+                  class="banner-content"
+                  style="
+                    background-image: linear-gradient(
+                      to bottom,
+                      rgba(215, 98, 13, 0),
+                      rgba(215, 98, 13, 1)
+                    );
+                  "
+                >
+                  <div class="badge-white">
+                    <img
+                      src="https://active.ridibooks.com/badge/carousel/only.10f7ddc213c9b8498c8688ebd4b62161.png"
+                      alt="only"
+                      aria-label="리디 단독"
+                    />
+                  </div>
+
+                  <h2 class="title">
+                    화제의 웹툰<br />
+                    원작 도서 모음전
+                  </h2>
+                  <p class="desc">재밌게 본 웹툰, 그 원작이 궁금하다면?</p>
+                </div>
+              </a>
+            </li>
+          </ol>
+
+          <div class="slider-controls">
+            <button
+              class="btn-40 control-button is-prev"
+              type="button"
+              aria-label="이전 이미지 보기"
+            >
+              <i class="ic-chevron" aria-hidden="true"></i>
+            </button>
+
+            <button
+              class="btn-40 control-button is-next"
+              type="button"
+              aria-label="다음 이미지 보기"
+            >
+              <i class="ic-chevron" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- %%%%%%%%%% 이벤트 배너 섹션 끝 %%%%%%%%%% -->
+
       <!-- %%%%%%%%%% 퀵 메뉴 섹션 시작 %%%%%%%%%% -->
       <nav class="quick-menu">
         <h2 class="visually-hidden">퀵 메뉴</h2>
