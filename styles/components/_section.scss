@@ -1,0 +1,39 @@
+.book-list-section {
+  margin-top: 24px;
+
+  &.is-rank {
+    padding-bottom: 16px;
+  }
+
+  .section-title {
+    @include flexbox(start);
+    @include text-style(17);
+    padding-top: 5px;
+    padding-bottom: 11px;
+    font-weight: 700;
+    color: $primary;
+
+    .btn-ghost {
+      color: $primary;
+    }
+
+    .ic-chevron {
+      margin-left: -4px;
+      font-size: 12px;
+    }
+  }
+
+  @include responsive('T') {
+    margin-top: 40px;
+
+    &.is-rank {
+      padding-bottom: 30px;
+    }
+
+    .section-title {
+      @include text-style(22);
+      padding-top: 6px;
+      padding-bottom: 16px;
+    }
+  }
+}
