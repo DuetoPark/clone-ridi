@@ -18,6 +18,10 @@
     border-radius: 5px;
   }
 
+  .slider-controls {
+    @include pos-center-y;
+  }
+
   .banner-card {
     position: relative;
     display: block;
@@ -67,10 +71,6 @@
     }
   }
 
-  .slider-controls {
-    display: none;
-  }
-
   @include responsive('T') {
     .banner-card {
       height: 400px;
@@ -86,43 +86,6 @@
 
         .desc {
           @include text-style(16);
-        }
-      }
-    }
-
-    .slider-controls {
-      @include pos-center-y;
-      @include flexbox(between);
-      width: 100%;
-
-      .control-button {
-        @include flexbox;
-        width: 40px;
-        font-size: 16px;
-        color: $primary;
-        background-color: $white;
-        border: 1px solid $border;
-        border-radius: 50%;
-        box-shadow: 2px 4px 8px rgba($black, 0.06);
-
-        &:hover > i {
-          opacity: 0.4;
-        }
-
-        &:active > i {
-          color: $blue;
-        }
-
-        &.is-prev {
-          transform: translateX(-50%) rotate(180deg);
-        }
-
-        &.is-next {
-          transform: translateX(50%);
-        }
-
-        i {
-          transition: opacity 150ms ease-in-out;
         }
       }
     }
