@@ -1,0 +1,15 @@
+.banner {
+  &-category {
+    padding: 8px 12px 10px 12px;
+    margin: 0 -#{$sm-margin};
+    border-top: 1px solid $border-light;
+  }
+
+  @include responsive('T') {
+    &-category {
+      padding: 15px 0;
+      margin: 0 0 0 -2px;
+      border-top: 0;
+    }
+  }
+}
