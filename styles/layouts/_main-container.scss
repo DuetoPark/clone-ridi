@@ -3,4 +3,11 @@
     width: 100vw;
     margin: 0 -#{$sm-margin};
   }
+
+  @include responsive('T') {
+    .quick-menu {
+      width: 100%;
+      margin: 0;
+    }
+  }
 }
