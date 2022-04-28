@@ -85,3 +85,44 @@ const ridiStoreSlider = tns({
   controlsContainer: '.ridi-store-carousel .slider-controls',
   ...commonOptions_bookList,
 });
+
+// NOTE: Book Rank Carousel
+const nowSlider = tns({
+  container: '.now-best-carousel .slider-list',
+  controlsContainer: '.now-best-carousel .slider-controls',
+  items: 1,
+  nav: false,
+  gutter: 26,
+  preventScrollOnTouch: 'auto',
+  speed: 500,
+  mouseDrag: true,
+  loop: false,
+  responsive: {
+    768: {
+      items: 2,
+    },
+    1170: {
+      items: 3,
+    },
+  },
+});
+
+const bestSellerSlider = tns({
+  container: '.best-seller-carousel .slider-list',
+  controlsContainer: '.best-seller-carousel .slider-controls',
+  items: 1,
+  nav: false,
+  gutter: 26,
+  preventScrollOnTouch: 'auto',
+  speed: 500,
+  mouseDrag: true,
+  loop: false,
+  responsive: {
+    768: {
+      items: 2,
+    },
+    1170: {
+      items: 3,
+    },
+  },
+});
