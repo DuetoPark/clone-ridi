@@ -34,6 +34,12 @@
       @include text-style(22);
       padding-top: 6px;
       padding-bottom: 16px;
+
+      .ic-chevron {
+        position: relative;
+        top: -2px;
+        font-size: 16px;
+      }
     }
   }
 }
