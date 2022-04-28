@@ -1,0 +1,115 @@
+.book-card {
+  $card-size-sm: 120px;
+  $card-size-md: 180px;
+
+  $card-ratio: 145%; // ratio: 1 : 1.45
+
+  position: relative;
+  width: $card-size-sm;
+
+  .card-link {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .card-content {
+    .book-image {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 0;
+      padding-top: $card-ratio;
+      margin-bottom: 6px;
+      overflow: hidden;
+      border-radius: 4px;
+
+      > img {
+        @include pos-center;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .tag-wrapper {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+    }
+
+    .book-info {
+      @include column-flexbox(start, start);
+
+      .name {
+        @include line-clamp(2);
+        @include text-style(14);
+        width: 100%;
+        color: $primary;
+
+        strong {
+          font-weight: 500;
+        }
+      }
+
+      .author {
+        @include truncate;
+        @include text-style(12);
+        width: 100%;
+        margin-top: 3px;
+      }
+
+      .review {
+        @include text-style(11);
+        margin-top: 4px;
+
+        &.is-empty {
+          .star-rating {
+            color: $tertiary;
+          }
+        }
+
+        .star-rating {
+          color: $red;
+        }
+
+        .review-count {
+          color: $secondary;
+        }
+      }
+    }
+  }
+
+  @include responsive('T') {
+    width: $card-size-md;
+
+    .card-content {
+      .book-image {
+        margin-bottom: 10px;
+        transition: opacity 150ms ease-in-out;
+
+        &:active,
+        &:hover {
+          opacity: 0.4;
+        }
+      }
+
+      .book-info {
+        .name {
+          @include text-style(16);
+        }
+
+        .author {
+          @include text-style(14);
+          margin-top: 6px;
+        }
+
+        .review {
+          @include text-style(13);
+          margin-top: 7px;
+        }
+      }
+    }
+  }
+}
