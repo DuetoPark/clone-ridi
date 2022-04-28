@@ -58,26 +58,41 @@
     .book-info {
       @include column-flexbox(start, start);
       order: 3;
+      width: calc(100% - 120px);
 
       .name {
-        @include truncate;
         @include text-style(14);
+        width: 100%;
         color: $primary;
 
         strong {
+          @include truncate;
+          display: block;
           font-weight: 500;
         }
       }
 
       .author {
-        @include truncate;
         @include text-style(12);
+        @include truncate;
+        display: block;
+        width: 100%;
         margin-top: 3px;
+
+        span {
+          color: $secondary;
+        }
       }
 
       .review {
         @include text-style(11);
         margin-top: 4px;
+
+        &.is-empty {
+          .star-rating {
+            color: $tertiary;
+          }
+        }
 
         .star-rating {
           color: $red;
@@ -115,6 +130,8 @@
       }
 
       .book-info {
+        width: calc(100% - 160px);
+
         .name {
           @include text-style(16);
         }
