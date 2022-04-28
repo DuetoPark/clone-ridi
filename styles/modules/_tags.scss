@@ -21,6 +21,11 @@
   background-color: $secondary;
 }
 
+.tag-yellow {
+  @extend %tag-base;
+  background-color: #c4b676;
+}
+
 .tag-wrapper {
   @include inline-flexbox(start);
   overflow: hidden;
