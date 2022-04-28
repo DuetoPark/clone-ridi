@@ -6,6 +6,7 @@ const MARGIN_DESKTOP = 30;
 const commonOptions = {
   items: 1,
   gutter: 6,
+  nav: false,
   speed: 500,
   mouseDrag: true,
   preventScrollOnTouch: 'auto',
@@ -30,7 +31,6 @@ const bannerSlider = tns({
 const todaySlider = tns({
   ...commonOptions,
   container: '.today-best-carousel .slider-list',
-  nav: false,
   edgePadding: MARGIN_MOBILE,
   controlsContainer: '.today-best-carousel .slider-controls',
   loop: false,
@@ -87,9 +87,7 @@ const ridiStoreSlider = tns({
 });
 
 // NOTE: Book Rank Carousel
-const nowSlider = tns({
-  container: '.now-best-carousel .slider-list',
-  controlsContainer: '.now-best-carousel .slider-controls',
+const commonOptions_rankList = {
   items: 1,
   nav: false,
   gutter: 26,
@@ -105,24 +103,16 @@ const nowSlider = tns({
       items: 3,
     },
   },
+};
+
+const nowSlider = tns({
+  container: '.now-best-carousel .slider-list',
+  controlsContainer: '.now-best-carousel .slider-controls',
+  ...commonOptions_rankList,
 });
 
 const bestSellerSlider = tns({
   container: '.best-seller-carousel .slider-list',
   controlsContainer: '.best-seller-carousel .slider-controls',
-  items: 1,
-  nav: false,
-  gutter: 26,
-  preventScrollOnTouch: 'auto',
-  speed: 500,
-  mouseDrag: true,
-  loop: false,
-  responsive: {
-    768: {
-      items: 2,
-    },
-    1170: {
-      items: 3,
-    },
-  },
+  ...commonOptions_rankList,
 });
