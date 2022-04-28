@@ -54,6 +54,16 @@
 
       .slider-controls {
         top: 81px !important;
+
+        .control-button {
+          &.is-prev {
+            transform: translateX(-50%) rotate(180deg);
+          }
+
+          &.is-next {
+            transform: translateX(50%);
+          }
+        }
       }
     }
 

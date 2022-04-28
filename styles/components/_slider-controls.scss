@@ -3,10 +3,12 @@
 
   @include responsive('T') {
     @include flexbox(between);
+    position: absolute;
     width: 100%;
 
     .control-button {
       @include flexbox;
+      position: sticky;
       width: 40px;
       font-size: 16px;
       color: $primary;
@@ -14,6 +16,7 @@
       border: 1px solid $border;
       border-radius: 50%;
       box-shadow: 2px 4px 8px rgba($black, 0.06);
+      transition: all 150ms ease-in-out;
 
       &:hover > i {
         opacity: 0.4;
@@ -23,16 +26,34 @@
         color: $blue;
       }
 
+      &:disabled {
+        opacity: 0;
+        visibility: 0;
+      }
+
+      &.is-prev {
+        transform: translateX(0) rotate(180deg);
+      }
+
+      &.is-next {
+        right: 0;
+        transform: translateX(0);
+      }
+
+      i {
+        transition: opacity 150ms ease-in-out;
+      }
+    }
+  }
+
+  @include responsive('D') {
+    .control-button {
       &.is-prev {
         transform: translateX(-50%) rotate(180deg);
       }
 
       &.is-next {
         transform: translateX(50%);
-      }
-
-      i {
-        transition: opacity 150ms ease-in-out;
       }
     }
   }

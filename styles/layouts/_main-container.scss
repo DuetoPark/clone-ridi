@@ -6,30 +6,6 @@
       position: relative;
       margin: 0 -#{$sm-margin};
       line-height: 0; // NOTE: inline-block 공백 제거
-
-      .slider-controls {
-        position: absolute;
-        top: 110px;
-
-        .control-button {
-          position: sticky;
-          transition: all 150ms ease-in-out;
-
-          &.is-prev {
-            transform: translateX(0) rotate(180deg);
-          }
-
-          &.is-next {
-            right: 0;
-            transform: translateX(0);
-          }
-
-          &:disabled {
-            opacity: 0;
-            visibility: 0;
-          }
-        }
-      }
     }
   }
 
@@ -44,6 +20,10 @@
     .book-list-section {
       > [class$='-carousel'] {
         margin: 0 -#{$md-margin};
+
+        .slider-controls {
+          top: 110px;
+        }
       }
     }
 
@@ -57,18 +37,6 @@
     .book-list-section {
       > [class$='-carousel'] {
         margin: 0;
-
-        .slider-controls {
-          .control-button {
-            &.is-prev {
-              transform: translateX(-50%) rotate(180deg);
-            }
-
-            &.is-next {
-              transform: translateX(50%);
-            }
-          }
-        }
       }
     }
   }
