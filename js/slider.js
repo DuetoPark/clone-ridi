@@ -1,29 +1,37 @@
 'use strict';
 
-const slider = tns({
-  container: '.banner-carousel .slider-list',
+const MARGIN_MOBILE = 16;
+const MARGIN_DESKTOP = 30;
+
+const commonOptions = {
   items: 1,
+  gutter: 6,
+  speed: 500,
+  mouseDrag: true,
+  preventScrollOnTouch: 'auto',
+};
+
+const bannerSlider = tns({
+  ...commonOptions,
+  container: '.banner-carousel .slider-list',
   autoplay: true,
   autoplayHoverPause: true,
   autoplayPosition: 'bottom',
-  gutter: 6,
-  preventScrollOnTouch: 'auto',
-  speed: 500,
-  mouseDrag: true,
-  arrowKeys: true,
   autoplayButtonOutput: false,
+  arrowKeys: true,
   controlsContainer: '.banner-carousel .slider-controls',
+  responsive: {
+    768: {
+      mouseDrag: false,
+    },
+  },
 });
 
 const todaySlider = tns({
+  ...commonOptions,
   container: '.today-best-carousel .slider-list',
   nav: false,
-  items: 1,
-  gutter: 6,
-  edgePadding: 16,
-  preventScrollOnTouch: 'auto',
-  speed: 500,
-  mouseDrag: true,
+  edgePadding: MARGIN_MOBILE,
   controlsContainer: '.today-best-carousel .slider-controls',
   loop: false,
   responsive: {
@@ -38,4 +46,42 @@ const todaySlider = tns({
       slideBy: 3,
     },
   },
+});
+
+// NOTE: Book List Carousel
+const commonOptions_bookList = {
+  nav: false,
+  gutter: 6,
+  edgePadding: MARGIN_MOBILE,
+  autoWidth: true, // slider-item inline 형식으로 배치
+  preventScrollOnTouch: 'auto',
+  speed: 500,
+  mouseDrag: true,
+  loop: false,
+  responsive: {
+    768: {
+      edgePadding: MARGIN_DESKTOP,
+    },
+    1170: {
+      edgePadding: 0,
+    },
+  },
+};
+
+const newSlider = tns({
+  container: '.new-carousel .slider-list',
+  controlsContainer: '.new-carousel .slider-controls',
+  ...commonOptions_bookList,
+});
+
+const mdPickSlider = tns({
+  container: '.md-pick-carousel .slider-list',
+  controlsContainer: '.md-pick-carousel .slider-controls',
+  ...commonOptions_bookList,
+});
+
+const ridiStoreSlider = tns({
+  container: '.ridi-store-carousel .slider-list',
+  controlsContainer: '.ridi-store-carousel .slider-controls',
+  ...commonOptions_bookList,
 });
