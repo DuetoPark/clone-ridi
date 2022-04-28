@@ -1,9 +1,4 @@
 .today-best {
-  .today-best-carousel {
-    position: relative;
-    margin: 0 -#{$sm-margin};
-  }
-
   .today-book-card {
     display: block;
 
@@ -55,23 +50,10 @@
 
   @include responsive('T') {
     .today-best-carousel {
-      margin: 0;
+      margin: 0 !important;
 
       .slider-controls {
-        .control-button {
-          position: absolute;
-          top: 81px;
-          transition: all 150ms ease-in-out;
-
-          &.is-next {
-            right: 0;
-          }
-
-          &:disabled {
-            opacity: 0;
-            visibility: 0;
-          }
-        }
+        top: 81px !important;
       }
     }
 
