@@ -5,11 +5,13 @@
   }
 
   .category-item {
+    border-radius: 100px;
+    transition: all 200ms ease-in-out;
+
     &.is-active {
       overflow: hidden;
       pointer-events: none;
       background-color: $blue;
-      border-radius: 100px;
 
       .btn-ghost {
         font-weight: 700;
@@ -23,9 +25,11 @@
     padding: 0 10px;
     font-weight: 500;
     color: $primary;
+    transition: color 200ms ease-in-out;
 
     span {
       color: inherit;
+      pointer-events: none;
     }
   }
 
