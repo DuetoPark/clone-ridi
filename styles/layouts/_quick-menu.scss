@@ -63,14 +63,6 @@
       @include text-style(13);
       transition: color 150ms ease-in-out;
 
-      &:hover {
-        color: $tertiary;
-
-        .image-wrapper {
-          border-color: $tertiary;
-        }
-      }
-
       .image-wrapper,
       img {
         width: $menu-size-md;
@@ -79,6 +71,16 @@
 
       .image-wrapper {
         transition: border-color 150ms ease-in-out;
+      }
+    }
+  }
+
+  @include responsive('D') {
+    .menu:hover {
+      color: $tertiary;
+
+      .image-wrapper {
+        border-color: $tertiary;
       }
     }
   }

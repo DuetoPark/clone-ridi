@@ -51,28 +51,24 @@
   @include responsive('T') {
     .today-best-carousel {
       margin: 0 !important;
+    }
 
-      .slider-controls {
-        top: 81px !important;
+    .slider-controls {
+      top: 81px !important;
 
-        .control-button {
-          &.is-prev {
-            transform: translateX(-50%) rotate(180deg);
-          }
+      .control-button {
+        &.is-prev {
+          transform: translateX(-50%) rotate(180deg);
+        }
 
-          &.is-next {
-            transform: translateX(50%);
-          }
+        &.is-next {
+          transform: translateX(50%);
         }
       }
     }
 
     .today-book-card {
       transition: opacity 150ms ease-in-out;
-
-      &:hover {
-        opacity: 0.4;
-      }
 
       .card-image {
         margin-bottom: 20px;
@@ -88,6 +84,12 @@
           @include text-style(14);
         }
       }
+    }
+  }
+
+  @include responsive('D') {
+    .today-book-card:hover {
+      opacity: 0.4;
     }
   }
 }

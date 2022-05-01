@@ -18,11 +18,17 @@
 .btn-primary {
   color: $primary;
   background-color: transparent;
-  transition: background-color 150ms ease-in-out;
 
-  &:active,
-  &:hover {
+  &:active {
     background-color: $background;
+  }
+
+  @include responsive('D') {
+    transition: background-color 150ms ease-in-out;
+
+    &:hover {
+      background-color: $background;
+    }
   }
 }
 
@@ -30,22 +36,35 @@
   color: $secondary;
   background-color: transparent;
   border: 1px solid $background;
-  transition: all 150ms ease-in-out;
 
-  &:active,
-  &:hover {
+  &:active {
     color: $primary;
     border-color: $secondary;
+  }
+
+  @include responsive('D') {
+    transition: all 150ms ease-in-out;
+
+    &:hover {
+      color: $primary;
+      border-color: $secondary;
+    }
   }
 }
 
 .btn-ghost {
   color: $secondary;
   background-color: transparent;
-  transition: opacity 150ms ease-in-out;
 
-  &:active,
-  &:hover {
+  &:active {
     opacity: 0.6;
+  }
+
+  @include responsive('D') {
+    transition: opacity 150ms ease-in-out;
+
+    &:hover {
+      opacity: 0.6;
+    }
   }
 }
