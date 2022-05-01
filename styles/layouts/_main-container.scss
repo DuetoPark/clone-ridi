@@ -14,29 +14,6 @@
     margin: 0 -#{$sm-margin};
   }
 
-  .now-best,
-  .best-seller {
-    > [class$='-carousel'] {
-      margin: 0 !important;
-
-      .slider-controls {
-        .control-button {
-          &.is-prev {
-            transform: translateX(-50%) rotate(180deg);
-          }
-
-          &.is-next {
-            transform: translateX(50%);
-          }
-        }
-      }
-
-      .book-card-item {
-        margin-bottom: 6px;
-      }
-    }
-  }
-
   @include responsive('T') {
     padding-bottom: 100px;
 
@@ -55,12 +32,29 @@
       margin: 0;
     }
 
+    .banner,
     .now-best,
     .best-seller {
       > [class$='-carousel'] {
+        margin: 0 !important;
+
         .slider-controls {
           top: 50%;
           transform: translateY(-50%);
+
+          .control-button {
+            &.is-prev {
+              transform: translateX(-50%) rotate(180deg);
+            }
+
+            &.is-next {
+              transform: translateX(50%);
+            }
+          }
+        }
+
+        .book-card-item {
+          margin-bottom: 6px;
         }
       }
     }
