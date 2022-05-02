@@ -7,7 +7,7 @@ const commonOptions = {
   items: 1,
   gutter: 6,
   nav: false,
-  speed: 500,
+  speed: 800,
   mouseDrag: true,
   preventScrollOnTouch: 'auto',
 };
@@ -15,6 +15,8 @@ const commonOptions = {
 const bannerSlider = tns({
   ...commonOptions,
   container: '.banner-carousel .slider-list',
+  items: 3,
+  slideBy: 1,
   autoplay: true,
   autoplayHoverPause: true,
   autoplayPosition: 'bottom',

@@ -1,15 +1,40 @@
 .banner-carousel {
   $slider-gutter: 6px;
+  $slider-count: 10 + 6;
+
+  $first-slider-percentage: percentage(3 / $slider-count);
+  $first-slider-width: calc(#{$first-slider-percentage} - 96px);
 
   position: relative;
 
   #tns1 {
-    .slider-item {
-      transition: width 150ms ease-in-out;
+    .tns-item {
+      transition: width 600ms ease-in-out;
+
+      .banner-content > * {
+        opacity: 0;
+        visibility: hidden;
+      }
     }
 
-    > .tns-slide-active ~ .tns-slide-active {
-      // NOTE: style 보충할 것
+    .tns-item.tns-slide-active {
+      width: $first-slider-width;
+
+      .banner-content > * {
+        opacity: 1;
+        visibility: visible;
+        transition: all 800ms ease-in-out;
+      }
+    }
+
+    .tns-item.tns-slide-active ~ .tns-slide-active {
+      flex-grow: 0;
+      width: 46px;
+
+      .banner-content > * {
+        opacity: 0;
+        visibility: hidden;
+      }
     }
   }
 
@@ -75,6 +100,20 @@
     .banner-card {
       height: 400px;
 
+      &:hover {
+        .banner-image {
+          img {
+            transform: scale(1.1);
+          }
+        }
+      }
+
+      .banner-image {
+        img {
+          transition: transform 200ms ease-in-out;
+        }
+      }
+
       .banner-content {
         height: 240px;
         padding: 46px;
@@ -89,5 +128,21 @@
         }
       }
     }
+  }
+}
+
+.swipe-left {
+  animation-delay: 500ms;
+  animation-name: swipeLeft;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes swipeLeft {
+  0% {
+    width: 100%;
+  }
+
+  100% {
+    width: 0;
   }
 }
