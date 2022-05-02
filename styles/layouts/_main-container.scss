@@ -7,6 +7,16 @@
       margin: 0 -#{$sm-margin};
       line-height: 0; // NOTE: inline-block 공백 제거
     }
+
+    &.is-rank {
+      > [class$='-carousel'] {
+        margin: 0;
+      }
+
+      .book-card-item:not(:last-child) {
+        margin-bottom: 6px;
+      }
+    }
   }
 
   .quick-menu {
@@ -20,10 +30,10 @@
     .book-list-section {
       > [class$='-carousel'] {
         margin: 0 -#{$md-margin};
+      }
 
-        .slider-controls {
-          top: 110px;
-        }
+      .slider-controls {
+        top: 110px;
       }
     }
 
@@ -37,25 +47,25 @@
     .best-seller {
       > [class$='-carousel'] {
         margin: 0 !important;
+      }
 
-        .slider-controls {
-          top: 50%;
-          transform: translateY(-50%);
+      .slider-controls {
+        top: 50%;
+        transform: translateY(-50%);
 
-          .control-button {
-            &.is-prev {
-              transform: translateX(-50%) rotate(180deg);
-            }
+        .control-button {
+          &.is-prev {
+            transform: translateX(-50%) rotate(180deg);
+          }
 
-            &.is-next {
-              transform: translateX(50%);
-            }
+          &.is-next {
+            transform: translateX(50%);
           }
         }
+      }
 
-        .book-card-item {
-          margin-bottom: 6px;
-        }
+      .book-card-item {
+        margin-bottom: 6px;
       }
     }
   }
