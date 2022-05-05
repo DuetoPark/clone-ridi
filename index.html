@@ -1,0 +1,3778 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="dueto park" />
+    <meta name="keywords" content="인터렉션, CSS, SCSS/Sass" />
+    <meta name="description" content="인터렉션 집중 페이지!" />
+
+    <title>도서추천 - 리디</title>
+    <link rel="apple-touch-icon" sizes="76x76" href="/clone-ridi/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/clone-ridi/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/clone-ridi/favicon-16x16.png" />
+    <link rel="manifest" href="/clone-ridi/site.webmanifest" />
+    <link rel="mask-icon" href="/clone-ridi/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <script type="module" src="./js/slider.js" defer></script>
+    <script type="module" src="./js/scroll-gnb.js" defer></script>
+    <script type="module" src="./js/banner-category.js" defer></script>
+    <script type="module" src="./js/drawer.js" defer></script>
+  </head>
+  <body>
+    <!-- !!!!!!!!!!########## 전체 페이지 영역 시작 ##########!!!!!!!!!! -->
+    <!-- ########## GNB 영역 시작 ########## -->
+    <header class="gnb">
+      <!-- %%%%%%%%%% GNB-TOP 영역 시작 %%%%%%%%%% -->
+      <div class="gnb-top">
+        <div class="container">
+          <nav class="gnb-nav">
+            <h1 class="visually-hidden">메뉴</h1>
+
+            <ul class="menu-list">
+              <li class="menu-item">
+                <a href="./index.html">웹툰/만화</a>
+              </li>
+              <li class="menu-item">
+                <a href="./index.html">웹소설</a>
+              </li>
+              <li class="menu-item is-active">
+                <a href="./index.html">도서</a>
+              </li>
+              <li class="menu-item">
+                <a href="./index.html">
+                  셀렉트
+                  <i class="ic-chevron" aria-label="더보기"></i>
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="sm-hidden gnb-auth">
+            <a class="btn-ghost" href="./index.html">회원가입</a>
+            <a class="btn-ghost" href="./index.html">로그인</a>
+          </div>
+        </div>
+      </div>
+      <!-- %%%%%%%%%% GNB-TOP 영역 끝 %%%%%%%%%% -->
+
+      <!-- %%%%%%%%%% GNB-BOTTOM 영역 시작 %%%%%%%%%% -->
+      <div class="gnb-bottom">
+        <div class="container">
+          <h1 class="logo">
+            <a href="./index.html" aria-label="리디 홈으로 이동">
+              <img src="./assets/Logo-ridi.svg" alt="리디" />
+              <img src="./assets/Logo-books.svg" alt="북스" />
+            </a>
+          </h1>
+
+          <div class="sm-only gnb-auth">
+            <a href="./index.html">로그인</a>
+          </div>
+
+          <form class="search-form">
+            <div class="input-group">
+              <input type="text" placeholder="검색어를 입력하세요" />
+              <i class="ic-search" aria-hidden="true"></i>
+            </div>
+            <button
+              class="delete-button"
+              type="button"
+              aria-label="검색어 삭제"
+            >
+              <i class="ic-delete" aria-hidden="true"></i>
+            </button>
+          </form>
+
+          <div class="sm-hidden link-group">
+            <a
+              class="gnb-icon-button btn-40 btn-primary"
+              href="./index.html"
+              aria-label="알림"
+            >
+              <i class="ic-bell" aria-hidden="true"></i>
+            </a>
+
+            <a
+              class="gnb-icon-button btn-40 btn-primary"
+              href="./index.html"
+              aria-label="장바구니"
+            >
+              <i class="ic-cart" aria-hidden="true"></i>
+            </a>
+
+            <a
+              class="gnb-icon-button btn-40 btn-primary"
+              href="./index.html"
+              aria-label="내 서제"
+            >
+              <i class="ic-book" aria-hidden="true"></i>
+            </a>
+
+            <a
+              class="gnb-icon-button btn-40 btn-primary"
+              href="./index.html"
+              aria-label="마이리디"
+            >
+              <i class="ic-user" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- %%%%%%%%%% GNB-BOTTOM 영역 끝 %%%%%%%%%% -->
+    </header>
+    <!-- ########## GNB 영역 끝 ########## -->
+
+    <main class="main-container container">
+      <!-- %%%%%%%%%% LNB 영역 시작 %%%%%%%%%% -->
+      <header class="lnb">
+        <h2 class="title">도서</h2>
+
+        <a class="btn-44 btn-ghost category-button" href="./index.html">
+          <i class="ic-menu" aria-hidden="true"></i>
+          <span class="sm-hidden">전체 카테고리</span>
+        </a>
+      </header>
+      <!-- %%%%%%%%%% LNB 영역 끝 %%%%%%%%%% -->
+
+      <!-- %%%%%%%%%% 이벤트 배너 섹션 시작 %%%%%%%%%% -->
+      <section class="banner" role="region">
+        <h1 class="visually-hidden">리디북스 이벤트 배너</h1>
+
+        <div class="banner-category">
+          <h3 class="visually-hidden">배너 카테고리</h3>
+
+          <ul class="category-list">
+            <li class="category-item is-active">
+              <button class="btn-ghost" type="button">추천</button>
+            </li>
+            <li class="category-item">
+              <button class="btn-ghost" type="button">
+                리디<span lang="en">ONLY</span>
+              </button>
+            </li>
+            <li class="category-item">
+              <button class="btn-ghost" type="button">이벤트</button>
+            </li>
+            <li class="category-item">
+              <button class="btn-ghost" type="button">대여</button>
+            </li>
+          </ul>
+        </div>
+
+        <div class="banner-carousel">
+          <ol class="slider-list">
+            <li class="slider-item">
+              <a class="banner-card" href="./index.html">
+                <figure class="banner-image">
+                  <img src="./assets/images/img-banner-01.jpg" alt="" />
+                  <figcaption class="visually-hidden">
+                    리디북스 이벤트 배너 이미지 1
+                  </figcaption>
+                </figure>
+
+                <div
+                  class="banner-content"
+                  style="
+                    background-image: linear-gradient(
+                      to bottom,
+                      rgba(30, 129, 72, 0),
+                      rgba(30, 129, 72, 1)
+                    );
+                  "
+                >
+                  <div class="badge-white">
+                    <img
+                      src="https://active.ridibooks.com/badge/carousel/select.848770918f11929ede6eb2ffc2e36353.png"
+                      alt="셀렉트"
+                    />
+                  </div>
+
+                  <h2 class="title">우리가 좋아서 하는 지구에 대한 이야기</h2>
+                  <p class="desc">리디셀렉트에서 만나는 &lt;어스 라이크&gt;</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="slider-item">
+              <a class="banner-card" href="./index.html">
+                <figure class="banner-image">
+                  <img src="./assets/images/img-banner-02.jpg" alt="" />
+                  <figcaption class="visually-hidden">
+                    리디북스 이벤트 배너 이미지 2
+                  </figcaption>
+                </figure>
+
+                <div
+                  class="banner-content"
+                  style="
+                    background-image: linear-gradient(
+                      to bottom,
+                      rgba(30, 55, 49, 0),
+                      rgba(30, 55, 49, 1)
+                    );
+                  "
+                >
+                  <h2 class="title" lang="en">EVERY DAY EARTH DAY</h2>
+                  <p class="desc">4/22 지구의 날 친환경 도서전</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="slider-item">
+              <a class="banner-card" href="./index.html">
+                <figure class="banner-image">
+                  <img src="./assets/images/img-banner-03.jpg" alt="" />
+                  <figcaption class="visually-hidden">
+                    리디북스 이벤트 배너 이미지 3
+                  </figcaption>
+                </figure>
+
+                <div
+                  class="banner-content"
+                  style="
+                    background-image: linear-gradient(
+                      to bottom,
+                      rgba(208, 208, 208, 0),
+                      rgba(208, 208, 208, 1)
+                    );
+                  "
+                >
+                  <h2 class="title">
+                    리디페이퍼4<br />
+                    예약 판매 오픈
+                  </h2>
+                  <p class="desc">4월 13일 오전 11시 ~ 4월 25일 자정</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="slider-item">
+              <a class="banner-card" href="./index.html">
+                <figure class="banner-image">
+                  <img src="./assets/images/img-banner-04.jpg" alt="" />
+                  <figcaption class="visually-hidden">
+                    리디북스 이벤트 배너 이미지 4
+                  </figcaption>
+                </figure>
+
+                <div
+                  class="banner-content"
+                  style="
+                    background-image: linear-gradient(
+                      to bottom,
+                      rgba(12, 21, 54, 0),
+                      rgba(12, 21, 54, 1)
+                    );
+                  "
+                >
+                  <h2 class="title">
+                    가불로 얻은 성장,<br />
+                    이제는 갚아야 할 시간이다!
+                  </h2>
+                  <p class="desc">연대와 공존, 사회권 선진국을 위한 제언</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="slider-item">
+              <a class="banner-card" href="./index.html">
+                <figure class="banner-image">
+                  <img src="./assets/images/img-banner-05.jpg" alt="" />
+                  <figcaption class="visually-hidden">
+                    리디북스 이벤트 배너 이미지 5
+                  </figcaption>
+                </figure>
+
+                <div
+                  class="banner-content"
+                  style="
+                    background-image: linear-gradient(
+                      to bottom,
+                      rgba(13, 27, 71, 0),
+                      rgba(13, 27, 71, 1)
+                    );
+                  "
+                >
+                  <div class="badge-white">
+                    <img
+                      src="https://active.ridibooks.com/badge/carousel/discount_50.f6180d600f2b25f5813c1c7dd4d2f82d.png"
+                      alt="50% 할인"
+                    />
+                  </div>
+
+                  <h2 class="title">
+                    작가정신<br />
+                    35주년 이벤트
+                  </h2>
+                  <p class="desc">3천원 특가 포함 전 종 반값 대여!</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="slider-item">
+              <a class="banner-card" href="./index.html">
+                <figure class="banner-image">
+                  <img src="./assets/images/img-banner-06.jpg" alt="" />
+                  <figcaption class="visually-hidden">
+                    리디북스 이벤트 배너 이미지 6
+                  </figcaption>
+                </figure>
+
+                <div
+                  class="banner-content"
+                  style="
+                    background-image: linear-gradient(
+                      to bottom,
+                      rgba(4, 189, 178, 0),
+                      rgba(4, 189, 178, 1)
+                    );
+                  "
+                >
+                  <div class="badge-white">
+                    <img
+                      src="https://active.ridibooks.com/badge/carousel/select.848770918f11929ede6eb2ffc2e36353.png"
+                      alt="셀렉트"
+                      aria-label="리디 셀렉트"
+                    />
+                  </div>
+
+                  <h2 class="title">
+                    리디셀렉트<br />
+                    4월 업데이트 공개!
+                  </h2>
+                  <p class="desc">
+                    새로운 도서들의 업데이트 일정을 미리 확인하세요
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="slider-item">
+              <a class="banner-card" href="./index.html">
+                <figure class="banner-image">
+                  <img src="./assets/images/img-banner-07.jpg" alt="" />
+                  <figcaption class="visually-hidden">
+                    리디북스 이벤트 배너 이미지 7
+                  </figcaption>
+                </figure>
+
+                <div
+                  class="banner-content"
+                  style="
+                    background-image: linear-gradient(
+                      to bottom,
+                      rgba(151, 132, 38, 0),
+                      rgba(151, 132, 38, 1)
+                    );
+                  "
+                >
+                  <div class="badge-white">
+                    <img
+                      src="https://active.ridibooks.com/badge/carousel/discount_50.f6180d600f2b25f5813c1c7dd4d2f82d.png"
+                      alt="50% 할인"
+                    />
+                  </div>
+
+                  <h2 class="title">
+                    J.R.R.톨킨 세계관의 정수<br />
+                    개정 완역판!
+                  </h2>
+                  <p class="desc">&lt;실마릴리온&gt; 세트 출간 이벤트</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="slider-item">
+              <a class="banner-card" href="./index.html">
+                <figure class="banner-image">
+                  <img src="./assets/images/img-banner-08.jpg" alt="" />
+                  <figcaption class="visually-hidden">
+                    리디북스 이벤트 배너 이미지 8
+                  </figcaption>
+                </figure>
+
+                <div
+                  class="banner-content"
+                  style="
+                    background-image: linear-gradient(
+                      to bottom,
+                      rgba(218, 114, 37, 0),
+                      rgba(218, 114, 37, 1)
+                    );
+                  "
+                >
+                  <h2 class="title">남편도, 이웃도 경찰까지 모두 이상하다</h2>
+                  <p class="desc">
+                    주변의 모든 사람이 의심스럽다. 심지어 나조차
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="slider-item">
+              <a class="banner-card" href="./index.html">
+                <figure class="banner-image">
+                  <img src="./assets/images/img-banner-09.jpg" alt="" />
+                  <figcaption class="visually-hidden">
+                    리디북스 이벤트 배너 이미지 9
+                  </figcaption>
+                </figure>
+
+                <div
+                  class="banner-content"
+                  style="
+                    background-image: linear-gradient(
+                      to bottom,
+                      rgba(84, 154, 198, 0),
+                      rgba(84, 154, 198, 1)
+                    );
+                  "
+                >
+                  <h2 class="title">가치 있는 인생 만드는 법</h2>
+                  <p class="desc">변증법적 행동치료사의 실질적 조언</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="slider-item">
+              <a class="banner-card" href="./index.html">
+                <figure class="banner-image">
+                  <img src="./assets/images/img-banner-10.jpg" alt="" />
+                  <figcaption class="visually-hidden">
+                    리디북스 이벤트 배너 이미지 10
+                  </figcaption>
+                </figure>
+
+                <div
+                  class="banner-content"
+                  style="
+                    background-image: linear-gradient(
+                      to bottom,
+                      rgba(215, 98, 13, 0),
+                      rgba(215, 98, 13, 1)
+                    );
+                  "
+                >
+                  <div class="badge-white">
+                    <img
+                      src="https://active.ridibooks.com/badge/carousel/only.10f7ddc213c9b8498c8688ebd4b62161.png"
+                      alt="only"
+                      aria-label="리디 단독"
+                    />
+                  </div>
+
+                  <h2 class="title">
+                    화제의 웹툰<br />
+                    원작 도서 모음전
+                  </h2>
+                  <p class="desc">재밌게 본 웹툰, 그 원작이 궁금하다면?</p>
+                </div>
+              </a>
+            </li>
+          </ol>
+
+          <div class="slider-controls">
+            <button
+              class="btn-40 control-button is-prev"
+              type="button"
+              aria-label="이전 이미지 보기"
+            >
+              <i class="ic-chevron" aria-hidden="true"></i>
+            </button>
+
+            <button
+              class="btn-40 control-button is-next"
+              type="button"
+              aria-label="다음 이미지 보기"
+            >
+              <i class="ic-chevron" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- %%%%%%%%%% 이벤트 배너 섹션 끝 %%%%%%%%%% -->
+
+      <!-- %%%%%%%%%% 퀵 메뉴 섹션 시작 %%%%%%%%%% -->
+      <nav class="quick-menu">
+        <h2 class="visually-hidden">퀵 메뉴</h2>
+
+        <ol class="menu-list">
+          <li class="menu-item">
+            <a class="menu" href="./index.html">
+              <div class="image-wrapper">
+                <img src="./assets/images/img-menu-01.jpg" alt="신간" />
+              </div>
+              신간
+            </a>
+          </li>
+          <li class="menu-item">
+            <a class="menu" href="./index.html">
+              <div class="image-wrapper">
+                <img src="./assets/images/img-menu-02.jpg" alt="이벤트 모음" />
+              </div>
+              이벤트 모음
+            </a>
+          </li>
+          <li class="menu-item">
+            <a class="menu" href="./index.html">
+              <div class="image-wrapper">
+                <img src="./assets/images/img-menu-03.jpg" alt="베스트셀러" />
+              </div>
+              베스트셀러
+            </a>
+          </li>
+          <li class="menu-item">
+            <a class="menu" href="./index.html">
+              <div class="image-wrapper">
+                <img src="./assets/images/img-menu-04.jpg" alt="인기세트" />
+              </div>
+              인기세트
+            </a>
+          </li>
+          <li class="menu-item">
+            <a class="menu" href="./index.html">
+              <div class="image-wrapper">
+                <img src="./assets/images/img-menu-05.jpg" alt="신간 캘린더" />
+              </div>
+              신간 캘린더
+            </a>
+          </li>
+          <li class="menu-item">
+            <a class="menu" href="./index.html">
+              <div class="image-wrapper">
+                <img src="./assets/images/img-menu-06.jpg" alt="위클리 쿠폰" />
+              </div>
+              위클리 쿠폰
+            </a>
+          </li>
+          <li class="menu-item">
+            <a class="menu" href="./index.html">
+              <div class="image-wrapper">
+                <img src="./assets/images/img-menu-07.jpg" alt="리디페이퍼" />
+              </div>
+              리디페이퍼
+            </a>
+          </li>
+          <li class="menu-item">
+            <a class="menu" href="./index.html">
+              <div class="image-wrapper">
+                <img src="./assets/images/img-menu-08.jpg" alt="혜택지도" />
+              </div>
+              혜택지도
+            </a>
+          </li>
+        </ol>
+      </nav>
+      <!-- %%%%%%%%%% 퀵 메뉴 섹션 끝 %%%%%%%%%% -->
+
+      <!-- %%%%%%%%%% 오늘, 리디의 발견 섹션 시작 %%%%%%%%%% -->
+      <section class="book-list-section today-best">
+        <h1 class="section-title">오늘, 리디의 발견</h1>
+
+        <div class="today-best-carousel">
+          <ul class="slider-list">
+            <li class="slider-item">
+              <a class="today-book-card" href="./index.html">
+                <div class="card-image">
+                  <figure>
+                    <img
+                      srcset="
+                        https://img.ridicdn.net/cover/4810000001/small#1            90w,
+                        https://img.ridicdn.net/cover/4810000001/small?dpi=xhdpi#1 120w,
+                        https://img.ridicdn.net/cover/4810000001/large#1           165w
+                      "
+                      sizes="150px"
+                      src="https://img.ridicdn.net/cover/4810000001/large#1"
+                      alt=""
+                    />
+                    <figcaption class="visually-hidden">
+                      오늘, 리디의 발견 이미지 1
+                    </figcaption>
+                  </figure>
+
+                  <div
+                    class="image-background"
+                    style="background-color: #7c5607"
+                  ></div>
+                </div>
+
+                <div class="card-content">
+                  <p class="book-comment">
+                    꼭 이성과 결혼해야만<br />
+                    가족을 이룰 수 있을까?
+                  </p>
+                  <strong class="book-name">비혼이고 아이를 키웁니다</strong>
+                </div>
+              </a>
+            </li>
+            <li class="slider-item">
+              <a class="today-book-card" href="./index.html">
+                <div class="card-image">
+                  <figure>
+                    <img
+                      srcset="
+                        https://img.ridicdn.net/cover/4115000011/small#1            90w,
+                        https://img.ridicdn.net/cover/4115000011/small?dpi=xhdpi#1 120w,
+                        https://img.ridicdn.net/cover/4115000011/large#1           165w
+                      "
+                      sizes="150px"
+                      src="https://img.ridicdn.net/cover/4115000011/large#1"
+                      alt=""
+                    />
+                    <figcaption class="visually-hidden">
+                      오늘, 리디의 발견 이미지 2
+                    </figcaption>
+                  </figure>
+
+                  <div
+                    class="image-background"
+                    style="background-color: #173667"
+                  ></div>
+                </div>
+
+                <div class="card-content">
+                  <p class="book-comment">세상을 이렇게 바라볼 수도 있구나</p>
+                  <strong class="book-name">당신 인생의 이야기</strong>
+                </div>
+              </a>
+            </li>
+            <li class="slider-item">
+              <a class="today-book-card" href="./index.html">
+                <div class="card-image">
+                  <figure>
+                    <img
+                      srcset="
+                        https://img.ridicdn.net/cover/749000323/small#1            90w,
+                        https://img.ridicdn.net/cover/749000323/small?dpi=xhdpi#1 120w,
+                        https://img.ridicdn.net/cover/749000323/large#1           165w
+                      "
+                      sizes="150px"
+                      src="https://img.ridicdn.net/cover/749000323/large#1"
+                      alt=""
+                    />
+                    <figcaption class="visually-hidden">
+                      오늘, 리디의 발견 이미지 3
+                    </figcaption>
+                  </figure>
+
+                  <div
+                    class="image-background"
+                    style="background-color: #124d6e"
+                  ></div>
+                </div>
+
+                <div class="card-content">
+                  <p class="book-comment">어차피 우울할거면 돈이라도</p>
+                  <strong class="book-name">우울할 땐 돈 공부</strong>
+                </div>
+              </a>
+            </li>
+            <li class="slider-item">
+              <a class="today-book-card" href="./index.html">
+                <div class="card-image">
+                  <figure>
+                    <img
+                      srcset="
+                        https://img.ridicdn.net/cover/1287000241/small#1            90w,
+                        https://img.ridicdn.net/cover/1287000241/small?dpi=xhdpi#1 120w,
+                        https://img.ridicdn.net/cover/1287000241/large#1           165w
+                      "
+                      sizes="150px"
+                      src="https://img.ridicdn.net/cover/1287000241/large#1"
+                    />
+                    <figcaption class="visually-hidden">
+                      오늘, 리디의 발견 이미지 4
+                    </figcaption>
+                  </figure>
+
+                  <div
+                    class="image-background"
+                    style="background-color: #214968"
+                  ></div>
+                </div>
+
+                <div class="card-content">
+                  <p class="book-comment">그게 아닌게 아니라고?</p>
+                  <strong class="book-name">알고리즘이 지배한다는 착각</strong>
+                </div>
+              </a>
+            </li>
+          </ul>
+
+          <div class="slider-controls">
+            <button
+              class="btn-40 control-button is-prev"
+              type="button"
+              aria-label="이전 이미지 보기"
+            >
+              <i class="ic-chevron" aria-hidden="true"></i>
+            </button>
+
+            <button
+              class="btn-40 control-button is-next"
+              type="button"
+              aria-label="다음 이미지 보기"
+            >
+              <i class="ic-chevron" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- %%%%%%%%%% 오늘, 리디의 발견 섹션 끝 %%%%%%%%%% -->
+
+      <!-- %%%%%%%%%% 지금 많이 읽고 있는 책 섹션 시작 %%%%%%%%%% -->
+      <section class="book-list-section is-rank now-best">
+        <h1 class="section-title">지금 많이 읽고 있는 책</h1>
+
+        <div class="now-best-carousel">
+          <ol class="slider-list">
+            <li class="slider-item">
+              <ol class="book-card-list">
+                <li class="book-card-item">
+                  <div class="rank-card">
+                    <a class="sm-only card-link" href="./index.html"></a>
+
+                    <div class="card-content">
+                      <span class="book-rank" aria-label="1위">1</span>
+
+                      <a class="book-image" href="./index.html">
+                        <img
+                          srcset="
+                            https://img.ridicdn.net/cover/1176000033/small#1            90w,
+                            https://img.ridicdn.net/cover/1176000033/small?dpi=xhdpi#1 120w,
+                            https://img.ridicdn.net/cover/1176000033/large#1           165w
+                          "
+                          sizes="(max-width: 767px) 60px, (min-width: 768px) 80px"
+                          src="https://img.ridicdn.net/cover/1176000033/small#1"
+                          alt="개정판 | 하얀 늑대들"
+                        />
+                      </a>
+
+                      <div class="book-info">
+                        <a class="btn-ghost name" href="./index.html">
+                          <strong>개정판 | 하얀 늑대들</strong>
+                        </a>
+
+                        <a class="btn-ghost author" href="./index.html">
+                          <strong>윤현승</strong>
+                        </a>
+
+                        <p class="review">
+                          <span class="star-rating">
+                            <i
+                              class="ic-star"
+                              aria-label="구매자 평균 별점"
+                            ></i>
+                            <strong>4.7</strong>
+                          </span>
+
+                          <span class="review-count">
+                            (<strong aria-label="리뷰 3523건">3,523</strong>)
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="book-card-item">
+                  <div class="rank-card">
+                    <a class="sm-only card-link" href="./index.html"></a>
+
+                    <div class="card-content">
+                      <span class="book-rank" aria-label="2위">2</span>
+
+                      <a class="book-image" href="./index.html">
+                        <img
+                          srcset="
+                            https://img.ridicdn.net/cover/3306000090/small#1            90w,
+                            https://img.ridicdn.net/cover/3306000090/small?dpi=xhdpi#1 120w,
+                            https://img.ridicdn.net/cover/3306000090/large#1           165w
+                          "
+                          sizes="(max-width: 767px) 60px, (min-width: 768px) 80px"
+                          src="https://img.ridicdn.net/cover/3306000090/small#1"
+                          alt="개정 번역판 | 해리 포터와 마법사의 돌"
+                        />
+                      </a>
+
+                      <div class="book-info">
+                        <a class="btn-ghost name" href="./index.html">
+                          <strong>개정 번역판 | 해리 포터와 마법사의 돌</strong>
+                        </a>
+
+                        <a class="btn-ghost author" href="./index.html">
+                          <strong>조앤.K.롤링</strong>
+                        </a>
+
+                        <p class="review">
+                          <span class="star-rating">
+                            <i
+                              class="ic-star"
+                              aria-label="구매자 평균 별점"
+                            ></i>
+                            <strong>4.8</strong>
+                          </span>
+
+                          <span class="review-count">
+                            (<strong aria-label="리뷰 567건">567</strong>)
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="book-card-item">
+                  <div class="rank-card">
+                    <a class="sm-only card-link" href="./index.html"></a>
+
+                    <div class="card-content">
+                      <span class="book-rank" aria-label="3위">3</span>
+
+                      <a class="book-image" href="./index.html">
+                        <img
+                          srcset="
+                            https://img.ridicdn.net/cover/222002077/small#1            90w,
+                            https://img.ridicdn.net/cover/222002077/small?dpi=xhdpi#1 120w,
+                            https://img.ridicdn.net/cover/222002077/large#1           165w
+                          "
+                          sizes="(max-width: 767px) 60px, (min-width: 768px) 80px"
+                          src="https://img.ridicdn.net/cover/222002077/small#1"
+                          alt="가자, 어디에도 없었던 방법으로"
+                        />
+                      </a>
+
+                      <div class="book-info">
+                        <a class="btn-ghost name" href="./index.html">
+                          <strong>가자, 어디에도 없었던 방법으로</strong>
+                        </a>
+
+                        <a class="btn-ghost author" href="./index.html">
+                          <strong>테라오 겐</strong>
+                        </a>
+
+                        <p class="review">
+                          <span class="star-rating">
+                            <i
+                              class="ic-star"
+                              aria-label="구매자 평균 별점"
+                            ></i>
+                            <strong>4.5</strong>
+                          </span>
+
+                          <span class="review-count">
+                            (<strong aria-label="리뷰 330건">330</strong>)
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ol>
+            </li>
+            <li class="slider-item">
+              <ol class="book-card-list">
+                <li class="book-card-item">
+                  <div class="rank-card">
+                    <a class="sm-only card-link" href="./index.html"></a>
+
+                    <div class="card-content">
+                      <span class="book-rank" aria-label="4위">4</span>
+
+                      <a class="book-image" href="./index.html">
+                        <img
+                          srcset="
+                            https://img.ridicdn.net/cover/510001099/small#1            90w,
+                            https://img.ridicdn.net/cover/510001099/small?dpi=xhdpi#1 120w,
+                            https://img.ridicdn.net/cover/510001099/large#1           165w
+                          "
+                          sizes="(max-width: 767px) 60px, (min-width: 768px) 80px"
+                          src="https://img.ridicdn.net/cover/510001099/small#1"
+                          alt="프로젝트 헤일메리"
+                        />
+                      </a>
+
+                      <div class="book-info">
+                        <a class="btn-ghost name" href="./index.html">
+                          <strong>프로젝트 헤일메리</strong>
+                        </a>
+
+                        <a class="btn-ghost author" href="./index.html">
+                          <strong>앤디 위어</strong>
+                        </a>
+
+                        <p class="review">
+                          <span class="star-rating">
+                            <i
+                              class="ic-star"
+                              aria-label="구매자 평균 별점"
+                            ></i>
+                            <strong>4.8</strong>
+                          </span>
+
+                          <span class="review-count">
+                            (<strong aria-label="리뷰 1401건">1,401</strong>)
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="book-card-item">
+                  <div class="rank-card">
+                    <a class="sm-only card-link" href="./index.html"></a>
+
+                    <div class="card-content">
+                      <span class="book-rank" aria-label="5위">5</span>
+
+                      <a class="book-image" href="./index.html">
+                        <img
+                          srcset="
+                            https://img.ridicdn.net/cover/1648000401/small#1            90w,
+                            https://img.ridicdn.net/cover/1648000401/small?dpi=xhdpi#1 120w,
+                            https://img.ridicdn.net/cover/1648000401/large#1           165w
+                          "
+                          sizes="(max-width: 767px) 60px, (min-width: 768px) 80px"
+                          src="https://img.ridicdn.net/cover/1648000401/small#1"
+                          alt="달러구트 꿈 백화점 2"
+                        />
+                      </a>
+
+                      <div class="book-info">
+                        <a class="btn-ghost name" href="./index.html">
+                          <strong>달러구트 꿈 백화점 2</strong>
+                        </a>
+
+                        <a class="btn-ghost author" href="./index.html">
+                          <strong>이미예</strong>
+                        </a>
+
+                        <p class="review">
+                          <span class="star-rating">
+                            <i
+                              class="ic-star"
+                              aria-label="구매자 평균 별점"
+                            ></i>
+                            <strong>4.7</strong>
+                          </span>
+
+                          <span class="review-count">
+                            (<strong aria-label="리뷰 857건">857</strong>)
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="book-card-item">
+                  <div class="rank-card">
+                    <a class="sm-only card-link" href="./index.html"></a>
+
+                    <div class="card-content">
+                      <span class="book-rank" aria-label="6위">6</span>
+
+                      <a class="book-image" href="./index.html">
+                        <img
+                          srcset="
+                            https://img.ridicdn.net/cover/4335000026/small#1            90w,
+                            https://img.ridicdn.net/cover/4335000026/small?dpi=xhdpi#1 120w,
+                            https://img.ridicdn.net/cover/4335000026/large#1           165w
+                          "
+                          sizes="(max-width: 767px) 60px, (min-width: 768px) 80px"
+                          src="https://img.ridicdn.net/cover/4335000026/small#1"
+                          alt="돈의 역사는 되풀이된다"
+                        />
+                      </a>
+
+                      <div class="book-info">
+                        <a class="btn-ghost name" href="./index.html">
+                          <strong>돈의 역사는 되풀이된다</strong>
+                        </a>
+
+                        <a class="btn-ghost author" href="./index.html">
+                          <strong>홍춘욱</strong>
+                        </a>
+
+                        <p class="review">
+                          <span class="star-rating">
+                            <i
+                              class="ic-star"
+                              aria-label="구매자 평균 별점"
+                            ></i>
+                            <strong>4.4</strong>
+                          </span>
+
+                          <span class="review-count">
+                            (<strong aria-label="리뷰 154건">154</strong>)
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ol>
+            </li>
+            <li class="slider-item">
+              <ol class="book-card-list">
+                <li class="book-card-item">
+                  <div class="rank-card">
+                    <a class="sm-only card-link" href="./index.html"></a>
+
+                    <div class="card-content">
+                      <span class="book-rank" aria-label="7위">7</span>
+
+                      <a class="book-image" href="./index.html">
+                        <img
+                          srcset="
+                            https://img.ridicdn.net/cover/1890000206/small#1            90w,
+                            https://img.ridicdn.net/cover/1890000206/small?dpi=xhdpi#1 120w,
+                            https://img.ridicdn.net/cover/1890000206/large#1           165w
+                          "
+                          sizes="(max-width: 767px) 60px, (min-width: 768px) 80px"
+                          src="https://img.ridicdn.net/cover/1890000206/small#1"
+                          alt="출근길 부자 수업: 트렌드 편"
+                        />
+                      </a>
+
+                      <div class="book-info">
+                        <a class="btn-ghost name" href="./index.html">
+                          <strong>출근길 부자 수업: 트렌드 편</strong>
+                        </a>
+
+                        <a class="btn-ghost author" href="./index.html">
+                          <strong>김연하</strong> <span>외 8명</span>
+                        </a>
+
+                        <p class="review">
+                          <span class="star-rating">
+                            <i
+                              class="ic-star"
+                              aria-label="구매자 평균 별점"
+                            ></i>
+                            <strong>4.4</strong>
+                          </span>
+
+                          <span class="review-count">
+                            (<strong aria-label="리뷰 5건">5</strong>)
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="book-card-item">
+                  <div class="rank-card">
+                    <a class="sm-only card-link" href="./index.html"></a>
+
+                    <div class="card-content">
+                      <span class="book-rank" aria-label="8위">8</span>
+
+                      <a class="book-image" href="./index.html">
+                        <img
+                          srcset="
+                            https://img.ridicdn.net/cover/1883000147/small#1            90w,
+                            https://img.ridicdn.net/cover/1883000147/small?dpi=xhdpi#1 120w,
+                            https://img.ridicdn.net/cover/1883000147/large#1           165w
+                          "
+                          sizes="(max-width: 767px) 60px, (min-width: 768px) 80px"
+                          src="https://img.ridicdn.net/cover/1883000147/small#1"
+                          alt="데일 카네기 자기관리론"
+                        />
+                      </a>
+
+                      <div class="book-info">
+                        <a class="btn-ghost name" href="./index.html">
+                          <strong>데일 카네기 자기관리론</strong>
+                        </a>
+
+                        <a class="btn-ghost author" href="./index.html">
+                          <strong>데일 카네기</strong>
+                        </a>
+
+                        <p class="review">
+                          <span class="star-rating">
+                            <i
+                              class="ic-star"
+                              aria-label="구매자 평균 별점"
+                            ></i>
+                            <strong>4.6</strong>
+                          </span>
+
+                          <span class="review-count">
+                            (<strong aria-label="리뷰 47건">47</strong>)
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="book-card-item">
+                  <div class="rank-card">
+                    <a class="sm-only card-link" href="./index.html"></a>
+
+                    <div class="card-content">
+                      <span class="book-rank" aria-label="9위">9</span>
+
+                      <a class="book-image" href="./index.html">
+                        <img
+                          srcset="
+                            https://img.ridicdn.net/cover/745000143/small#1            90w,
+                            https://img.ridicdn.net/cover/745000143/small?dpi=xhdpi#1 120w,
+                            https://img.ridicdn.net/cover/745000143/large#1           165w
+                          "
+                          src="https://img.ridicdn.net/cover/745000143/small#1"
+                          sizes="(max-width: 767px) 60px, (min-width: 768px) 80px"
+                          alt="할아버지와 꿀벌과 나"
+                        />
+                      </a>
+
+                      <div class="book-info">
+                        <a class="btn-ghost name" href="./index.html">
+                          <strong>할아버지와 꿀벌과 나</strong>
+                        </a>
+
+                        <a class="btn-ghost author" href="./index.html">
+                          <strong>메러디스 메이</strong>
+                        </a>
+
+                        <p class="review">
+                          <span class="star-rating">
+                            <i
+                              class="ic-star"
+                              aria-label="구매자 평균 별점"
+                            ></i>
+                            <strong>4.8</strong>
+                          </span>
+
+                          <span class="review-count">
+                            (<strong aria-label="리뷰 234건">234</strong>)
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ol>
+            </li>
+            <li class="slider-item">
+              <ol class="book-card-list">
+                <li class="book-card-item">
+                  <div class="rank-card">
+                    <a class="sm-only card-link" href="./index.html"></a>
+
+                    <div class="card-content">
+                      <span class="book-rank" aria-label="10위">10</span>
+
+                      <a class="book-image" href="./index.html">
+                        <img
+                          srcset="
+                            https://img.ridicdn.net/cover/682000112/small#1            90w,
+                            https://img.ridicdn.net/cover/682000112/small?dpi=xhdpi#1 120w,
+                            https://img.ridicdn.net/cover/682000112/large#1           165w
+                          "
+                          sizes="(max-width: 767px) 60px, (min-width: 768px) 80px"
+                          src="https://img.ridicdn.net/cover/682000112/small#1"
+                          alt="드래곤 라자"
+                        />
+                      </a>
+
+                      <div class="book-info">
+                        <a class="btn-ghost name" href="./index.html">
+                          <strong>드래곤 라자</strong>
+                        </a>
+
+                        <a class="btn-ghost author" href="./index.html">
+                          <strong>이영도</strong>
+                        </a>
+
+                        <p class="review">
+                          <span class="star-rating">
+                            <i
+                              class="ic-star"
+                              aria-label="구매자 평균 별점"
+                            ></i>
+                            <strong>4.8</strong>
+                          </span>
+
+                          <span class="review-count">
+                            (<strong aria-label="리뷰 1432건">1,432</strong>)
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="book-card-item">
+                  <div class="rank-card">
+                    <a class="sm-only card-link" href="./index.html"></a>
+
+                    <div class="card-content">
+                      <span class="book-rank" aria-label="11위">11</span>
+
+                      <a class="book-image" href="./index.html">
+                        <img
+                          srcset="
+                            https://img.ridicdn.net/cover/656000114/small#1            90w,
+                            https://img.ridicdn.net/cover/656000114/small?dpi=xhdpi#1 120w,
+                            https://img.ridicdn.net/cover/656000114/large#1           165w
+                          "
+                          sizes="(max-width: 767px) 60px, (min-width: 768px) 80px"
+                          src="https://img.ridicdn.net/cover/656000114/small#1"
+                          alt="타이탄의 도구들"
+                        />
+                      </a>
+
+                      <div class="book-info">
+                        <a class="btn-ghost name" href="./index.html">
+                          <strong>타이탄의 도구들</strong>
+                        </a>
+
+                        <a class="btn-ghost author" href="./index.html">
+                          <strong>티모시 페리스</strong>
+                        </a>
+
+                        <p class="review">
+                          <span class="star-rating">
+                            <i
+                              class="ic-star"
+                              aria-label="구매자 평균 별점"
+                            ></i>
+                            <strong>4.3</strong>
+                          </span>
+
+                          <span class="review-count">
+                            (<strong aria-label="리뷰 1153건">1,153</strong>)
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="book-card-item">
+                  <div class="rank-card">
+                    <a class="sm-only card-link" href="./index.html"></a>
+
+                    <div class="card-content">
+                      <span class="book-rank" aria-label="12위">12</span>
+
+                      <a class="book-image" href="./index.html">
+                        <img
+                          srcset="
+                            https://img.ridicdn.net/cover/682000417/small#1            90w,
+                            https://img.ridicdn.net/cover/682000417/small?dpi=xhdpi#1 120w,
+                            https://img.ridicdn.net/cover/682000417/large#1           165w
+                          "
+                          src="https://img.ridicdn.net/cover/682000417/small#1"
+                          sizes="(max-width: 767px) 60px, (min-width: 768px) 80px"
+                          alt="피를 마시는 새"
+                        />
+                      </a>
+
+                      <div class="book-info">
+                        <a class="btn-ghost name" href="./index.html">
+                          <strong>피를 마시는 새</strong>
+                        </a>
+
+                        <a class="btn-ghost author" href="./index.html">
+                          <strong>이영도</strong>
+                        </a>
+
+                        <p class="review">
+                          <span class="star-rating">
+                            <i
+                              class="ic-star"
+                              aria-label="구매자 평균 별점"
+                            ></i>
+                            <strong>4.8</strong>
+                          </span>
+
+                          <span class="review-count">
+                            (<strong aria-label="리뷰 455건">455</strong>)
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ol>
+            </li>
+          </ol>
+
+          <div class="slider-controls">
+            <button
+              class="btn-40 control-button is-prev"
+              type="button"
+              aria-label="이전 이미지 보기"
+            >
+              <i class="ic-chevron" aria-hidden="true"></i>
+            </button>
+
+            <button
+              class="btn-40 control-button is-next"
+              type="button"
+              aria-label="다음 이미지 보기"
+            >
+              <i class="ic-chevron" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- %%%%%%%%%% 지금 많이 읽고 있는 책 섹션 끝 %%%%%%%%%% -->
+
+      <!-- %%%%%%%%%% 새로 나온 책 섹션 시작 %%%%%%%%%% -->
+      <section class="book-list-section new">
+        <h1 class="section-title">
+          <a
+            class="btn-ghost"
+            href="./index.html"
+            aria-label="새로 나온 책 더보기"
+          >
+            새로 나온 책
+            <i class="ic-chevron" aria-hidden="true"></i>
+          </a>
+        </h1>
+
+        <div class="new-carousel">
+          <ul class="slider-list">
+            <li class="slider-item">
+              <div class="book-card">
+                <a class="sm-only card-link" href="./index.html"></a>
+
+                <div class="card-content">
+                  <a class="book-image" href="./index.html">
+                    <img
+                      srcset="
+                        https://img.ridicdn.net/cover/371002663/small?dpi=xhdpi#1  120w,
+                        https://img.ridicdn.net/cover/371002663/large#1            165w,
+                        https://img.ridicdn.net/cover/371002663/small?dpi=xxhdpi#1 180w,
+                        https://img.ridicdn.net/cover/371002663/large?dpi=xhdpi#1  220w
+                      "
+                      sizes="(min-width: 768px) 180px, (max-width: 767px) 120px"
+                      src="https://img.ridicdn.net/cover/371002663/small?dpi=xxhdpi#1"
+                      alt="오래되고 멋진 클래식 레코드"
+                    />
+                  </a>
+
+                  <div class="book-info">
+                    <a class="btn-ghost name" href="./index.html">
+                      <strong>오래되고 멋진 클래식 레코드</strong>
+                    </a>
+
+                    <a class="btn-ghost author" href="./index.html">
+                      <strong>무라카미 하루키</strong>
+                    </a>
+
+                    <p class="review is-empty">
+                      <span class="star-rating">
+                        <i class="ic-star" aria-label="구매자 평균 별점"></i>
+                        <strong>0</strong>
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="slider-item">
+              <div class="book-card">
+                <a class="sm-only card-link" href="./index.html"></a>
+
+                <div class="card-content">
+                  <a class="book-image" href="./index.html">
+                    <img
+                      srcset="
+                        https://img.ridicdn.net/cover/243000401/small?dpi=xhdpi#1  120w,
+                        https://img.ridicdn.net/cover/243000401/large#1            165w,
+                        https://img.ridicdn.net/cover/243000401/small?dpi=xxhdpi#1 180w,
+                        https://img.ridicdn.net/cover/243000401/large?dpi=xhdpi#1  220w
+                      "
+                      sizes="(min-width: 768px) 180px, (max-width: 767px) 120px"
+                      src="https://img.ridicdn.net/cover/243000401/small?dpi=xxhdpi#1"
+                      alt="배우의 방"
+                    />
+
+                    <div class="tag-wrapper">
+                      <strong class="tag-red" aria-label="10% 할인">
+                        <img
+                          src="https://active.ridibooks.com/badge/on_book_cover/badge_1.c6669470315c0cfe1321b17f5dbb8d1e.png"
+                          alt=""
+                        />
+                        <img
+                          src="https://active.ridibooks.com/badge/on_book_cover/badge_0.923143bf7ef9b6939b5bec775b2c2eec.png"
+                          alt=""
+                        />
+                        <img
+                          src="https://active.ridibooks.com/badge/on_book_cover/percent.dc32752a61b84f21ffc7ed8e96d1961b.png"
+                          alt=""
+                        />
+                      </strong>
+                    </div>
+                  </a>
+
+                  <div class="book-info">
+                    <a class="btn-ghost name" href="./index.html">
+                      <strong>배우의 방</strong>
+                    </a>
+
+                    <a class="btn-ghost author" href="./index.html">
+                      <strong>정시우</strong>
+                    </a>
+
+                    <p class="review is-empty">
+                      <span class="star-rating">
+                        <i class="ic-star" aria-label="구매자 평균 별점"></i>
+                        <strong>0</strong>
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="slider-item">
+              <div class="book-card">
+                <a class="sm-only card-link" href="./index.html"></a>
+
+                <div class="card-content">
+                  <a class="book-image" href="./index.html">
+                    <img
+                      srcset="
+                        https://img.ridicdn.net/cover/754034451/small?dpi=xhdpi#1  120w,
+                        https://img.ridicdn.net/cover/754034451/large#1            165w,
+                        https://img.ridicdn.net/cover/754034451/small?dpi=xxhdpi#1 180w,
+                        https://img.ridicdn.net/cover/754034451/large?dpi=xhdpi#1  220w
+                      "
+                      sizes="(min-width: 768px) 180px, (max-width: 767px) 120px"
+                      src="https://img.ridicdn.net/cover/754034451/small?dpi=xxhdpi#1"
+                      alt="10배의 법칙 : 성공과 실패를 가르는 유일한 차이"
+                    />
+                  </a>
+
+                  <div class="book-info">
+                    <a class="btn-ghost name" href="./index.html">
+                      <strong
+                        >10배의 법칙 : 성공과 실패를 가르는 유일한 차이</strong
+                      >
+                    </a>
+
+                    <a class="btn-ghost author" href="./index.html">
+                      <strong>그랜트 카돈</strong>
+                    </a>
+
+                    <p class="review">
+                      <span class="star-rating">
+                        <i class="ic-star" aria-label="구매자 평균 별점"></i>
+                        <strong>5.0</strong>
+                      </span>
+
+                      <span class="review-count">
+                        (<strong aria-label="리뷰 2건">2</strong>)
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="slider-item">
+              <div class="book-card">
+                <a class="sm-only card-link" href="./index.html"></a>
+
+                <div class="card-content">
+                  <a class="book-image" href="./index.html">
+                    <img
+                      srcset="
+                        https://img.ridicdn.net/cover/606002383/small?dpi=xhdpi#1  120w,
+                        https://img.ridicdn.net/cover/606002383/large#1            165w,
+                        https://img.ridicdn.net/cover/606002383/small?dpi=xxhdpi#1 180w,
+                        https://img.ridicdn.net/cover/606002383/large?dpi=xhdpi#1  220w
+                      "
+                      sizes="(min-width: 768px) 180px, (max-width: 767px) 120px"
+                      src="https://img.ridicdn.net/cover/606002383/small?dpi=xxhdpi#1"
+                      alt="나의 투자는 새벽 4시에 시작된다"
+                    />
+
+                    <div class="tag-wrapper">
+                      <strong class="tag-red" aria-label="10% 할인">
+                        <img
+                          src="https://active.ridibooks.com/badge/on_book_cover/badge_1.c6669470315c0cfe1321b17f5dbb8d1e.png"
+                          alt=""
+                        />
+                        <img
+                          src="https://active.ridibooks.com/badge/on_book_cover/badge_0.923143bf7ef9b6939b5bec775b2c2eec.png"
+                          alt=""
+                        />
+                        <img
+                          src="https://active.ridibooks.com/badge/on_book_cover/percent.dc32752a61b84f21ffc7ed8e96d1961b.png"
+                          alt=""
+                        />
+                      </strong>
+                    </div>
+                  </a>
+
+                  <div class="book-info">
+                    <a class="btn-ghost name" href="./index.html">
+                      <strong>나의 투자는 새벽 4시에 시작된다</strong>
+                    </a>
+
+                    <a class="btn-ghost author" href="./index.html">
+                      <strong>유목민</strong>
+                    </a>
+
+                    <p class="review is-empty">
+                      <span class="star-rating">
+                        <i class="ic-star" aria-label="구매자 평균 별점"></i>
+                        <strong>0</strong>
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="slider-item">
+              <div class="book-card">
+                <a class="sm-only card-link" href="./index.html"></a>
+
+                <div class="card-content">
+                  <a class="book-image" href="./index.html">
+                    <img
+                      srcset="
+                        https://img.ridicdn.net/cover/1046000153/small?dpi=xhdpi#1  120w,
+                        https://img.ridicdn.net/cover/1046000153/large#1            165w,
+                        https://img.ridicdn.net/cover/1046000153/small?dpi=xxhdpi#1 180w,
+                        https://img.ridicdn.net/cover/1046000153/large?dpi=xhdpi#1  220w
+                      "
+                      sizes="(min-width: 768px) 180px, (max-width: 767px) 120px"
+                      src="https://img.ridicdn.net/cover/1046000153/small?dpi=xxhdpi#1"
+                      alt="초가치"
+                    />
+
+                    <div class="tag-wrapper">
+                      <strong class="tag-red" aria-label="10% 할인">
+                        <img
+                          src="https://active.ridibooks.com/badge/on_book_cover/badge_1.c6669470315c0cfe1321b17f5dbb8d1e.png"
+                          alt=""
+                        />
+                        <img
+                          src="https://active.ridibooks.com/badge/on_book_cover/badge_0.923143bf7ef9b6939b5bec775b2c2eec.png"
+                          alt=""
+                        />
+                        <img
+                          src="https://active.ridibooks.com/badge/on_book_cover/percent.dc32752a61b84f21ffc7ed8e96d1961b.png"
+                          alt=""
+                        />
+                      </strong>
+                    </div>
+                  </a>
+
+                  <div class="book-info">
+                    <a class="btn-ghost name" href="./index.html">
+                      <strong>나의 투자는 새벽 4시에 시작된다</strong>
+                    </a>
+
+                    <p class="review">
+                      <span class="star-rating">
+                        <i class="ic-star" aria-label="구매자 평균 별점"></i>
+                        <strong>4.0</strong>
+                      </span>
+
+                      <span class="review-count">
+                        (<strong aria-label="리뷰 1건">1</strong>)
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="slider-item">
+              <div class="book-card">
+                <a class="sm-only card-link" href="./index.html"></a>
+
+                <div class="card-content">
+                  <a class="book-image" href="./index.html">
+                    <img
+                      srcset="
+                        https://img.ridicdn.net/cover/754034485/small?dpi=xhdpi#1  120w,
+                        https://img.ridicdn.net/cover/754034485/large#1            165w,
+                        https://img.ridicdn.net/cover/754034485/small?dpi=xxhdpi#1 180w,
+                        https://img.ridicdn.net/cover/754034485/large?dpi=xhdpi#1  220w
+                      "
+                      sizes="(min-width: 768px) 180px, (max-width: 767px) 120px"
+                      src="https://img.ridicdn.net/cover/754034485/small?dpi=xxhdpi#1"
+                      alt="그럼에도 여기에서"
+                    />
+                  </a>
+
+                  <div class="book-info">
+                    <a class="btn-ghost name" href="./index.html">
+                      <strong>그럼에도 여기에서</strong>
+                    </a>
+
+                    <a class="btn-ghost author" href="./index.html">
+                      <strong>실키</strong>
+                    </a>
+
+                    <p class="review">
+                      <span class="star-rating">
+                        <i class="ic-star" aria-label="구매자 평균 별점"></i>
+                        <strong>5.0</strong>
+                      </span>
+
+                      <span class="review-count">
+                        (<strong aria-label="리뷰 1건">1</strong>)
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="slider-item">
+              <div class="book-card">
+                <a class="sm-only card-link" href="./index.html"></a>
+
+                <div class="card-content">
+                  <a class="book-image" href="./index.html">
+                    <img
+                      srcset="
+                        https://img.ridicdn.net/cover/3397000093/small?dpi=xhdpi#1  120w,
+                        https://img.ridicdn.net/cover/3397000093/large#1            165w,
+                        https://img.ridicdn.net/cover/3397000093/small?dpi=xxhdpi#1 180w,
+                        https://img.ridicdn.net/cover/3397000093/large?dpi=xhdpi#1  220w
+                      "
+                      sizes="(min-width: 768px) 180px, (max-width: 767px) 120px"
+                      src="https://img.ridicdn.net/cover/3397000093/small?dpi=xxhdpi#1"
+                      alt="돈의 맛"
+                    />
+                  </a>
+
+                  <div class="book-info">
+                    <a class="btn-ghost name" href="./index.html">
+                      <strong>돈의 맛</strong>
+                    </a>
+
+                    <p class="review">
+                      <span class="star-rating">
+                        <i class="ic-star" aria-label="구매자 평균 별점"></i>
+                        <strong>4.8</strong>
+                      </span>
+
+                      <span class="review-count">
+                        (<strong aria-label="리뷰 10건">10</strong>)
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="slider-item">
+              <div class="book-card">
+                <a class="sm-only card-link" href="./index.html"></a>
+
+                <div class="card-content">
+                  <a class="book-image" href="./index.html">
+                    <img
+                      srcset="
+                        https://img.ridicdn.net/cover/1046000157/small?dpi=xhdpi#1  120w,
+                        https://img.ridicdn.net/cover/1046000157/large#1            165w,
+                        https://img.ridicdn.net/cover/1046000157/small?dpi=xxhdpi#1 180w,
+                        https://img.ridicdn.net/cover/1046000157/large?dpi=xhdpi#1  220w
+                      "
+                      sizes="(min-width: 768px) 180px, (max-width: 767px) 120px"
+                      src="https://img.ridicdn.net/cover/1046000157/small?dpi=xxhdpi#1"
+                      alt="시점의 힘"
+                    />
+
+                    <div class="tag-wrapper">
+                      <strong class="tag-red" aria-label="10% 할인">
+                        <img
+                          src="https://active.ridibooks.com/badge/on_book_cover/badge_1.c6669470315c0cfe1321b17f5dbb8d1e.png"
+                          alt=""
+                        />
+                        <img
+                          src="https://active.ridibooks.com/badge/on_book_cover/badge_0.923143bf7ef9b6939b5bec775b2c2eec.png"
+                          alt=""
+                        />
+                        <img
+                          src="https://active.ridibooks.com/badge/on_book_cover/percent.dc32752a61b84f21ffc7ed8e96d1961b.png"
+                          alt=""
+                        />
+                      </strong>
+                    </div>
+                  </a>
+
+                  <div class="book-info">
+                    <a class="btn-ghost name" href="./index.html">
+                      <strong>시점의 힘</strong>
+                    </a>
+
+                    <a class="btn-ghost author" href="./index.html">
+                      <strong>샌드라 거스</strong>
+                    </a>
+
+                    <p class="review">
+                      <span class="star-rating">
+                        <i class="ic-star" aria-label="구매자 평균 별점"></i>
+                        <strong>5.0</strong>
+                      </span>
+
+                      <span class="review-count">
+                        (<strong aria-label="리뷰 1건">1</strong>)
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="slider-item">
+              <div class="book-card">
+                <a class="sm-only card-link" href="./index.html"></a>
+
+                <div class="card-content">
+                  <a class="book-image" href="./index.html">
+                    <img
+                      srcset="
+                        https://img.ridicdn.net/cover/111036702/small?dpi=xhdpi#1  120w,
+                        https://img.ridicdn.net/cover/111036702/large#1            165w,
+                        https://img.ridicdn.net/cover/111036702/small?dpi=xxhdpi#1 180w,
+                        https://img.ridicdn.net/cover/111036702/large?dpi=xhdpi#1  220w
+                      "
+                      sizes="(min-width: 768px) 180px, (max-width: 767px) 120px"
+                      src="https://img.ridicdn.net/cover/111036702/small?dpi=xxhdpi#1"
+                      alt="끝나지 않은 이야기 + 실마릴리온 세트"
+                    />
+
+                    <div class="tag-wrapper">
+                      <strong class="tag-red" aria-label="10% 할인">
+                        <img
+                          src="https://active.ridibooks.com/badge/on_book_cover/badge_1.c6669470315c0cfe1321b17f5dbb8d1e.png"
+                          alt=""
+                        />
+                        <img
+                          src="https://active.ridibooks.com/badge/on_book_cover/badge_0.923143bf7ef9b6939b5bec775b2c2eec.png"
+                          alt=""
+                        />
+                        <img
+                          src="https://active.ridibooks.com/badge/on_book_cover/percent.dc32752a61b84f21ffc7ed8e96d1961b.png"
+                          alt=""
+                        />
+                      </strong>
+
+                      <strong class="tag-gray">
+                        <img
+                          src="https://active.ridibooks.com/badge/on_book_cover/rent.55f7662fa2df580d2f5ab2d108660b82.png"
+                          alt="대여"
+                        />
+                      </strong>
+                    </div>
+                  </a>
+
+                  <div class="book-info">
+                    <a class="btn-ghost name" href="./index.html">
+                      <strong>끝나지 않은 이야기 + 실마릴리온 세트</strong>
+                    </a>
+
+                    <a class="btn-ghost author" href="./index.html">
+                      <strong>J.R.R.톨킨, 크리스토퍼 톨킨</strong>
+                    </a>
+
+                    <p class="review is-empty">
+                      <span class="star-rating">
+                        <i class="ic-star" aria-label="구매자 평균 별점"></i>
+                        <strong>0</strong>
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <div class="slider-controls">
+            <button
+              class="btn-40 control-button is-prev"
+              type="button"
+              aria-label="이전 이미지 보기"
+            >
+              <i class="ic-chevron" aria-hidden="true"></i>
+            </button>
+
+            <button
+              class="btn-40 control-button is-next"
+              type="button"
+              aria-label="다음 이미지 보기"
+            >
+              <i class="ic-chevron" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- %%%%%%%%%% 새로 나온 책 섹션 끝 %%%%%%%%%% -->
+
+      <!-- %%%%%%%%%% 베스트셀러 섹션 시작 %%%%%%%%%% -->
+      <section class="book-list-section is-rank best-seller">
+        <h1 class="section-title">
+          <a
+            class="btn-ghost"
+            href="./index.html"
+            aria-label="베스트셀러 더보기"
+          >
+            베스트셀러
+            <i class="ic-chevron" aria-hidden="true"></i>
+          </a>
+        </h1>
+
+        <div class="best-seller-carousel">
+          <ol class="slider-list">
+            <li class="slider-item">
+              <ol class="book-card-list">
+                <li class="book-card-item">
+                  <div class="rank-card">
+                    <a class="sm-only card-link" href="./index.html"></a>
+
+                    <div class="card-content">
+                      <span class="book-rank" aria-label="1위">1</span>
+
+                      <a class="book-image" href="./index.html">
+                        <img
+                          srcset="
+                            https://img.ridicdn.net/cover/2119000024/small#1            90w,
+                            https://img.ridicdn.net/cover/2119000024/small?dpi=xhdpi#1 120w,
+                            https://img.ridicdn.net/cover/2119000024/large#1           165w
+                          "
+                          sizes="(max-width: 767px) 60px, (min-width: 768px) 80px"
+                          src="https://img.ridicdn.net/cover/2119000024/small#1"
+                          alt="저주토끼"
+                        />
+                      </a>
+
+                      <div class="book-info">
+                        <a class="btn-ghost name" href="./index.html">
+                          <strong>저주토끼</strong>
+                        </a>
+
+                        <a class="btn-ghost author" href="./index.html">
+                          <strong>정보라</strong>
+                        </a>
+
+                        <p class="review">
+                          <span class="star-rating">
+                            <i
+                              class="ic-star"
+                              aria-label="구매자 평균 별점"
+                            ></i>
+                            <strong>4.0</strong>
+                          </span>
+
+                          <span class="review-count">
+                            (<strong aria-label="리뷰 138건">138</strong>)
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="book-card-item">
+                  <div class="rank-card">
+                    <a class="sm-only card-link" href="./index.html"></a>
+
+                    <div class="card-content">
+                      <span class="book-rank" aria-label="2위">2</span>
+
+                      <a class="book-image" href="./index.html">
+                        <img
+                          srcset="
+                            https://img.ridicdn.net/cover/371002656/small#1            90w,
+                            https://img.ridicdn.net/cover/371002656/small?dpi=xhdpi#1 120w,
+                            https://img.ridicdn.net/cover/371002656/large#1           165w
+                          "
+                          sizes="(max-width: 767px) 60px, (min-width: 768px) 80px"
+                          src="https://img.ridicdn.net/cover/371002656/small#1"
+                          alt="2022 제13회 젊은작가상 수상작품집"
+                        />
+                      </a>
+
+                      <div class="book-info">
+                        <a class="btn-ghost name" href="./index.html">
+                          <strong>2022 제13회 젊은작가상 수상작품집</strong>
+                        </a>
+
+                        <a class="btn-ghost author" href="./index.html">
+                          <strong>임솔아</strong><span> 외 6명</span>
+                        </a>
+
+                        <p class="review is-empty">
+                          <span class="star-rating">
+                            <i
+                              class="ic-star"
+                              aria-label="구매자 평균 별점"
+                            ></i>
+                            <strong>0</strong>
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="book-card-item">
+                  <div class="rank-card">
+                    <a class="sm-only card-link" href="./index.html"></a>
+
+                    <div class="card-content">
+                      <span class="book-rank" aria-label="3위">3</span>
+
+                      <a class="book-image" href="./index.html">
+                        <img
+                          srcset="
+                            https://img.ridicdn.net/cover/852001243/small#1            90w,
+                            https://img.ridicdn.net/cover/852001243/small?dpi=xhdpi#1 120w,
+                            https://img.ridicdn.net/cover/852001243/large#1           165w
+                          "
+                          sizes="(max-width: 767px) 60px, (min-width: 768px) 80px"
+                          src="https://img.ridicdn.net/cover/852001243/small#1"
+                          alt="물고기는 존재하지 않는다"
+                        />
+                      </a>
+
+                      <div class="book-info">
+                        <a class="btn-ghost name" href="./index.html">
+                          <strong>물고기는 존재하지 않는다</strong>
+                        </a>
+
+                        <a class="btn-ghost author" href="./index.html">
+                          <strong>룰루 밀러</strong>
+                        </a>
+
+                        <p class="review">
+                          <span class="star-rating">
+                            <i
+                              class="ic-star"
+                              aria-label="구매자 평균 별점"
+                            ></i>
+                            <strong>4.5</strong>
+                          </span>
+
+                          <span class="review-count">
+                            (<strong aria-label="리뷰 234건">234</strong>)
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ol>
+            </li>
+            <li class="slider-item">
+              <ol class="book-card-list">
+                <li class="book-card-item">
+                  <div class="rank-card">
+                    <a class="sm-only card-link" href="./index.html"></a>
+
+                    <div class="card-content">
+                      <span class="book-rank" aria-label="4위">4</span>
+
+                      <a class="book-image" href="./index.html">
+                        <img
+                          srcset="
+                            https://img.ridicdn.net/cover/4884000001/small#1            90w,
+                            https://img.ridicdn.net/cover/4884000001/small?dpi=xhdpi#1 120w,
+                            https://img.ridicdn.net/cover/4884000001/large#1           165w
+                          "
+                          sizes="(max-width: 767px) 60px, (min-width: 768px) 80px"
+                          src="https://img.ridicdn.net/cover/4884000001/small#1"
+                          alt="내일을 부르는 키스"
+                        />
+                      </a>
+
+                      <div class="book-info">
+                        <a class="btn-ghost name" href="./index.html">
+                          <strong>내일을 부르는 키스</strong>
+                        </a>
+
+                        <a class="btn-ghost author" href="./index.html">
+                          <strong>김동식</strong>
+                        </a>
+
+                        <p class="review">
+                          <span class="star-rating">
+                            <i
+                              class="ic-star"
+                              aria-label="구매자 평균 별점"
+                            ></i>
+                            <strong>4.7</strong>
+                          </span>
+
+                          <span class="review-count">
+                            (<strong aria-label="리뷰 26건">26</strong>)
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="book-card-item">
+                  <div class="rank-card">
+                    <a class="sm-only card-link" href="./index.html"></a>
+
+                    <div class="card-content">
+                      <span class="book-rank" aria-label="5위">5</span>
+
+                      <a class="book-image" href="./index.html">
+                        <img
+                          srcset="
+                            https://img.ridicdn.net/cover/4139000031/small#1            90w,
+                            https://img.ridicdn.net/cover/4139000031/small?dpi=xhdpi#1 120w,
+                            https://img.ridicdn.net/cover/4139000031/large#1           165w
+                          "
+                          sizes="(max-width: 767px) 60px, (min-width: 768px) 80px"
+                          src="https://img.ridicdn.net/cover/4139000031/small#1"
+                          alt="파이어"
+                        />
+                      </a>
+
+                      <div class="book-info">
+                        <a class="btn-ghost name" href="./index.html">
+                          <strong>파이어</strong>
+                        </a>
+
+                        <p class="review">
+                          <span class="star-rating">
+                            <i
+                              class="ic-star"
+                              aria-label="구매자 평균 별점"
+                            ></i>
+                            <strong>4.0</strong>
+                          </span>
+
+                          <span class="review-count">
+                            (<strong aria-label="리뷰 6건">6</strong>)
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="book-card-item">
+                  <div class="rank-card">
+                    <a class="sm-only card-link" href="./index.html"></a>
+
+                    <div class="card-content">
+                      <span class="book-rank" aria-label="6위">6</span>
+
+                      <a class="book-image" href="./index.html">
+                        <img
+                          srcset="
+                            https://img.ridicdn.net/cover/856000257/small#1            90w,
+                            https://img.ridicdn.net/cover/856000257/small?dpi=xhdpi#1 120w,
+                            https://img.ridicdn.net/cover/856000257/large#1           165w
+                          "
+                          src="https://img.ridicdn.net/cover/856000257/small#1"
+                          sizes="(max-width: 767px) 60px, (min-width: 768px) 80px"
+                          alt="가불 선진국"
+                        />
+                      </a>
+
+                      <div class="book-info">
+                        <a class="btn-ghost name" href="./index.html">
+                          <strong>가불 선진국</strong>
+                        </a>
+
+                        <p class="review">
+                          <span class="star-rating">
+                            <i
+                              class="ic-star"
+                              aria-label="구매자 평균 별점"
+                            ></i>
+                            <strong>5</strong>
+                          </span>
+
+                          <span class="review-count">
+                            (<strong aria-label="리뷰 3건">3</strong>)
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ol>
+            </li>
+            <li class="slider-item">
+              <ol class="book-card-list">
+                <li class="book-card-item">
+                  <div class="rank-card">
+                    <a class="sm-only card-link" href="./index.html"></a>
+
+                    <div class="card-content">
+                      <span class="book-rank" aria-label="7위">7</span>
+
+                      <a class="book-image" href="./index.html">
+                        <img
+                          srcset="
+                            https://img.ridicdn.net/cover/4291003189/small#1            90w,
+                            https://img.ridicdn.net/cover/4291003189/small?dpi=xhdpi#1 120w,
+                            https://img.ridicdn.net/cover/4291003189/large#1           165w
+                          "
+                          sizes="(max-width: 767px) 60px, (min-width: 768px) 80px"
+                          src="https://img.ridicdn.net/cover/4291003189/small#1"
+                          alt="시맨틱 에러 포토에세이"
+                        />
+                      </a>
+
+                      <div class="book-info">
+                        <a class="btn-ghost name" href="./index.html">
+                          <strong>시맨틱 에러 포토에세이</strong>
+                        </a>
+
+                        <a class="btn-ghost author" href="./index.html">
+                          <strong>래몽래인</strong> <span>외 1명</span>
+                        </a>
+
+                        <p class="review">
+                          <span class="star-rating">
+                            <i
+                              class="ic-star"
+                              aria-label="구매자 평균 별점"
+                            ></i>
+                            <strong>5.0</strong>
+                          </span>
+
+                          <span class="review-count">
+                            (<strong aria-label="리뷰 413건">413</strong>)
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="book-card-item">
+                  <div class="rank-card">
+                    <a class="sm-only card-link" href="./index.html"></a>
+
+                    <div class="card-content">
+                      <span class="book-rank" aria-label="8위">8</span>
+
+                      <a class="book-image" href="./index.html">
+                        <img
+                          srcset="
+                            https://img.ridicdn.net/cover/2177000101/small#1            90w,
+                            https://img.ridicdn.net/cover/2177000101/small?dpi=xhdpi#1 120w,
+                            https://img.ridicdn.net/cover/2177000101/large#1           165w
+                          "
+                          sizes="(max-width: 767px) 60px, (min-width: 768px) 80px"
+                          src="https://img.ridicdn.net/cover/2177000101/small#1"
+                          alt="불편한 편의점"
+                        />
+                      </a>
+
+                      <div class="book-info">
+                        <a class="btn-ghost name" href="./index.html">
+                          <strong>불편한 편의점</strong>
+                        </a>
+
+                        <a class="btn-ghost author" href="./index.html">
+                          <strong>김호연</strong>
+                        </a>
+
+                        <p class="review">
+                          <span class="star-rating">
+                            <i
+                              class="ic-star"
+                              aria-label="구매자 평균 별점"
+                            ></i>
+                            <strong>4.7</strong>
+                          </span>
+
+                          <span class="review-count">
+                            (<strong aria-label="리뷰 795건">795</strong>)
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="book-card-item">
+                  <div class="rank-card">
+                    <a class="sm-only card-link" href="./index.html"></a>
+
+                    <div class="card-content">
+                      <span class="book-rank" aria-label="9위">9</span>
+
+                      <a class="book-image" href="./index.html">
+                        <img
+                          srcset="
+                            https://img.ridicdn.net/cover/2337000037/small#1            90w,
+                            https://img.ridicdn.net/cover/2337000037/small?dpi=xhdpi#1 120w,
+                            https://img.ridicdn.net/cover/2337000037/large#1           165w
+                          "
+                          sizes="(max-width: 767px) 60px, (min-width: 768px) 80px"
+                          src="https://img.ridicdn.net/cover/2337000037/small#1"
+                          alt="지금의 나로 충분하다"
+                        />
+                      </a>
+
+                      <div class="book-info">
+                        <a class="btn-ghost name" href="./index.html">
+                          <strong>지금의 나로 충분하다</strong>
+                        </a>
+
+                        <p class="review">
+                          <span class="star-rating">
+                            <i
+                              class="ic-star"
+                              aria-label="구매자 평균 별점"
+                            ></i>
+                            <strong>5.0</strong>
+                          </span>
+
+                          <span class="review-count">
+                            (<strong aria-label="리뷰 3건">3</strong>)
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ol>
+            </li>
+            <li class="slider-item">
+              <ol class="book-card-list">
+                <li class="book-card-item">
+                  <div class="rank-card">
+                    <a class="sm-only card-link" href="./index.html"></a>
+
+                    <div class="card-content">
+                      <span class="book-rank" aria-label="10위">10</span>
+
+                      <a class="book-image" href="./index.html">
+                        <img
+                          srcset="
+                            https://img.ridicdn.net/cover/3397000091/small#1            90w,
+                            https://img.ridicdn.net/cover/3397000091/small?dpi=xhdpi#1 120w,
+                            https://img.ridicdn.net/cover/3397000091/large#1           165w
+                          "
+                          src="https://img.ridicdn.net/cover/3397000091/small#1"
+                          sizes="(max-width: 767px) 60px, (min-width: 768px) 80px"
+                          alt="마음의 법칙"
+                        />
+                      </a>
+
+                      <div class="book-info">
+                        <a class="btn-ghost name" href="./index.html">
+                          <strong>마음의 법칙</strong>
+                        </a>
+
+                        <a class="btn-ghost author" href="./index.html">
+                          <strong>폴커 키츠</strong><span> 외 1명</span>
+                        </a>
+
+                        <p class="review">
+                          <span class="star-rating">
+                            <i
+                              class="ic-star"
+                              aria-label="구매자 평균 별점"
+                            ></i>
+                            <strong>4.5</strong>
+                          </span>
+
+                          <span class="review-count">
+                            (<strong aria-label="리뷰 16건">16</strong>)
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="book-card-item">
+                  <div class="rank-card">
+                    <a class="sm-only card-link" href="./index.html"></a>
+
+                    <div class="card-content">
+                      <span class="book-rank" aria-label="11위">11</span>
+
+                      <a class="book-image" href="./index.html">
+                        <img
+                          srcset="
+                            https://img.ridicdn.net/cover/606002381/small#1            90w,
+                            https://img.ridicdn.net/cover/606002381/small?dpi=xhdpi#1 120w,
+                            https://img.ridicdn.net/cover/606002381/large#1           165w
+                          "
+                          src="https://img.ridicdn.net/cover/606002381/small#1"
+                          sizes="(max-width: 767px) 60px, (min-width: 768px) 80px"
+                          alt="운명을 바꾸는 부동산 투자 수업 (기초편)"
+                        />
+                      </a>
+
+                      <div class="book-info">
+                        <a class="btn-ghost name" href="./index.html">
+                          <strong>
+                            운명을 바꾸는 부동산 투자 수업 (기초편)
+                          </strong>
+                        </a>
+
+                        <a class="btn-ghost author" href="./index.html">
+                          <strong>정태익</strong>
+                        </a>
+
+                        <p class="review">
+                          <span class="star-rating">
+                            <i
+                              class="ic-star"
+                              aria-label="구매자 평균 별점"
+                            ></i>
+                            <strong>4.5</strong>
+                          </span>
+
+                          <span class="review-count">
+                            (<strong aria-label="리뷰 1153건">21</strong>)
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="book-card-item">
+                  <div class="rank-card">
+                    <a class="sm-only card-link" href="./index.html"></a>
+
+                    <div class="card-content">
+                      <span class="book-rank" aria-label="12위">12</span>
+
+                      <a class="book-image" href="./index.html">
+                        <img
+                          srcset="
+                            https://img.ridicdn.net/cover/728004969/small#1            90w,
+                            https://img.ridicdn.net/cover/728004969/small?dpi=xhdpi#1 120w,
+                            https://img.ridicdn.net/cover/728004969/large#1           165w
+                          "
+                          src="https://img.ridicdn.net/cover/728004969/small#1"
+                          sizes="(max-width: 767px) 60px, (min-width: 768px) 80px"
+                          alt="씨네21 2022년 05월호 1353호 (주간)"
+                        />
+                      </a>
+
+                      <div class="book-info">
+                        <a class="btn-ghost name" href="./index.html">
+                          <strong>씨네21 2022년 05월호 1353호 (주간)</strong>
+                        </a>
+
+                        <p class="review is-empty">
+                          <span class="star-rating">
+                            <i
+                              class="ic-star"
+                              aria-label="구매자 평균 별점"
+                            ></i>
+                            <strong>0</strong>
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ol>
+            </li>
+          </ol>
+
+          <div class="slider-controls">
+            <button
+              class="btn-40 control-button is-prev"
+              type="button"
+              aria-label="이전 이미지 보기"
+            >
+              <i class="ic-chevron" aria-hidden="true"></i>
+            </button>
+
+            <button
+              class="btn-40 control-button is-next"
+              type="button"
+              aria-label="다음 이미지 보기"
+            >
+              <i class="ic-chevron" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- %%%%%%%%%% 베스트셀러 섹션 끝 %%%%%%%%%% -->
+
+      <!-- %%%%%%%%%% MD's PICK 섹션 시작 %%%%%%%%%% -->
+      <section class="book-list-section md-pick">
+        <h1 class="section-title">
+          <a
+            class="btn-ghost"
+            href="./index.html"
+            aria-label="MD's PICK 더보기"
+          >
+            MD's PICK
+            <i class="ic-chevron" aria-hidden="true"></i>
+          </a>
+        </h1>
+
+        <div class="md-pick-carousel">
+          <ul class="slider-list">
+            <li class="slider-item">
+              <div class="book-card">
+                <a class="sm-only card-link" href="./index.html"></a>
+
+                <div class="card-content">
+                  <a class="book-image" href="./index.html">
+                    <img
+                      srcset="
+                        https://img.ridicdn.net/cover/4884000001/small?dpi=xhdpi#1  120w,
+                        https://img.ridicdn.net/cover/4884000001/large#1            165w,
+                        https://img.ridicdn.net/cover/4884000001/small?dpi=xxhdpi#1 180w,
+                        https://img.ridicdn.net/cover/4884000001/large?dpi=xhdpi#1  220w
+                      "
+                      sizes="(min-width: 768px) 180px, (max-width: 767px) 120px"
+                      src="https://img.ridicdn.net/cover/4884000001/small?dpi=xxhdpi#1"
+                      alt="내일을 부르는 키스"
+                    />
+
+                    <div class="tag-wrapper">
+                      <strong class="tag-red" aria-label="10% 할인">
+                        <img
+                          src="https://active.ridibooks.com/badge/on_book_cover/badge_1.c6669470315c0cfe1321b17f5dbb8d1e.png"
+                          alt=""
+                        />
+                        <img
+                          src="https://active.ridibooks.com/badge/on_book_cover/badge_0.923143bf7ef9b6939b5bec775b2c2eec.png"
+                          alt=""
+                        />
+                        <img
+                          src="https://active.ridibooks.com/badge/on_book_cover/percent.dc32752a61b84f21ffc7ed8e96d1961b.png"
+                          alt=""
+                        />
+                      </strong>
+
+                      <strong class="tag-gray">
+                        <img
+                          src="https://active.ridibooks.com/badge/on_book_cover/rent.55f7662fa2df580d2f5ab2d108660b82.png"
+                          alt="대여"
+                        />
+                      </strong>
+                    </div>
+                  </a>
+
+                  <div class="book-info">
+                    <a class="btn-ghost name" href="./index.html">
+                      <strong>내일을 부르는 키스</strong>
+                    </a>
+
+                    <a class="btn-ghost author" href="./index.html">
+                      <strong>김동식</strong>
+                    </a>
+
+                    <p class="review">
+                      <span class="star-rating">
+                        <i class="ic-star" aria-label="구매자 평균 별점"></i>
+                        <strong>4.7</strong>
+                      </span>
+
+                      <span class="review-count">
+                        (<strong aria-label="리뷰 26건">26</strong>)
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="slider-item">
+              <div class="book-card">
+                <a class="sm-only card-link" href="./index.html"></a>
+
+                <div class="card-content">
+                  <a class="book-image" href="./index.html">
+                    <img
+                      srcset="
+                        https://img.ridicdn.net/cover/4886000001/small?dpi=xhdpi#1  120w,
+                        https://img.ridicdn.net/cover/4886000001/large#1            165w,
+                        https://img.ridicdn.net/cover/4886000001/small?dpi=xxhdpi#1 180w,
+                        https://img.ridicdn.net/cover/4886000001/large?dpi=xhdpi#1  220w
+                      "
+                      sizes="(min-width: 768px) 180px, (max-width: 767px) 120px"
+                      src="https://img.ridicdn.net/cover/4886000001/small?dpi=xxhdpi#1"
+                      alt="목청과 뱃심으로"
+                    />
+
+                    <div class="tag-wrapper">
+                      <strong class="tag-red" aria-label="10% 할인">
+                        <img
+                          src="https://active.ridibooks.com/badge/on_book_cover/badge_1.c6669470315c0cfe1321b17f5dbb8d1e.png"
+                          alt=""
+                        />
+                        <img
+                          src="https://active.ridibooks.com/badge/on_book_cover/badge_0.923143bf7ef9b6939b5bec775b2c2eec.png"
+                          alt=""
+                        />
+                        <img
+                          src="https://active.ridibooks.com/badge/on_book_cover/percent.dc32752a61b84f21ffc7ed8e96d1961b.png"
+                          alt=""
+                        />
+                      </strong>
+
+                      <strong class="tag-gray">
+                        <img
+                          src="https://active.ridibooks.com/badge/on_book_cover/rent.55f7662fa2df580d2f5ab2d108660b82.png"
+                          alt="대여"
+                        />
+                      </strong>
+                    </div>
+                  </a>
+
+                  <div class="book-info">
+                    <a class="btn-ghost name" href="./index.html">
+                      <strong>목청과 뱃심으로</strong>
+                    </a>
+
+                    <a class="btn-ghost author" href="./index.html">
+                      <strong>설재인</strong>
+                    </a>
+
+                    <p class="review">
+                      <span class="star-rating">
+                        <i class="ic-star" aria-label="구매자 평균 별점"></i>
+                        <strong>4.5</strong>
+                      </span>
+
+                      <span class="review-count">
+                        (<strong aria-label="리뷰 13건">13</strong>)
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="slider-item">
+              <div class="book-card">
+                <a class="sm-only card-link" href="./index.html"></a>
+
+                <div class="card-content">
+                  <a class="book-image" href="./index.html">
+                    <img
+                      srcset="
+                        https://img.ridicdn.net/cover/4888000001/small?dpi=xhdpi#1  120w,
+                        https://img.ridicdn.net/cover/4888000001/large#1            165w,
+                        https://img.ridicdn.net/cover/4888000001/small?dpi=xxhdpi#1 180w,
+                        https://img.ridicdn.net/cover/4888000001/large?dpi=xhdpi#1  220w
+                      "
+                      sizes="(min-width: 768px) 180px, (max-width: 767px) 120px"
+                      src="https://img.ridicdn.net/cover/4888000001/small?dpi=xxhdpi#1"
+                      alt="여행의 끝"
+                    />
+
+                    <div class="tag-wrapper">
+                      <strong class="tag-red" aria-label="10% 할인">
+                        <img
+                          src="https://active.ridibooks.com/badge/on_book_cover/badge_1.c6669470315c0cfe1321b17f5dbb8d1e.png"
+                          alt=""
+                        />
+                        <img
+                          src="https://active.ridibooks.com/badge/on_book_cover/badge_0.923143bf7ef9b6939b5bec775b2c2eec.png"
+                          alt=""
+                        />
+                        <img
+                          src="https://active.ridibooks.com/badge/on_book_cover/percent.dc32752a61b84f21ffc7ed8e96d1961b.png"
+                          alt=""
+                        />
+                      </strong>
+
+                      <strong class="tag-gray">
+                        <img
+                          src="https://active.ridibooks.com/badge/on_book_cover/rent.55f7662fa2df580d2f5ab2d108660b82.png"
+                          alt="대여"
+                        />
+                      </strong>
+                    </div>
+                  </a>
+
+                  <div class="book-info">
+                    <a class="btn-ghost name" href="./index.html">
+                      <strong>여행의 끝</strong>
+                    </a>
+
+                    <a class="btn-ghost author" href="./index.html">
+                      <strong>김성일</strong>
+                    </a>
+
+                    <p class="review">
+                      <span class="star-rating">
+                        <i class="ic-star" aria-label="구매자 평균 별점"></i>
+                        <strong>4.9</strong>
+                      </span>
+
+                      <span class="review-count">
+                        (<strong aria-label="리뷰 12건">12</strong>)
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="slider-item">
+              <div class="book-card">
+                <a class="sm-only card-link" href="./index.html"></a>
+
+                <div class="card-content">
+                  <a class="book-image" href="./index.html">
+                    <img
+                      srcset="
+                        https://img.ridicdn.net/cover/4577000004/small?dpi=xhdpi#1  120w,
+                        https://img.ridicdn.net/cover/4577000004/large#1            165w,
+                        https://img.ridicdn.net/cover/4577000004/small?dpi=xxhdpi#1 180w,
+                        https://img.ridicdn.net/cover/4577000004/large?dpi=xhdpi#1  220w
+                      "
+                      sizes="(min-width: 768px) 180px, (max-width: 767px) 120px"
+                      src="https://img.ridicdn.net/cover/4577000004/small?dpi=xxhdpi#1"
+                      alt="뒤집기"
+                    />
+
+                    <div class="tag-wrapper">
+                      <strong class="tag-red" aria-label="10% 할인">
+                        <img
+                          src="https://active.ridibooks.com/badge/on_book_cover/badge_1.c6669470315c0cfe1321b17f5dbb8d1e.png"
+                          alt=""
+                        />
+                        <img
+                          src="https://active.ridibooks.com/badge/on_book_cover/badge_0.923143bf7ef9b6939b5bec775b2c2eec.png"
+                          alt=""
+                        />
+                        <img
+                          src="https://active.ridibooks.com/badge/on_book_cover/percent.dc32752a61b84f21ffc7ed8e96d1961b.png"
+                          alt=""
+                        />
+                      </strong>
+
+                      <strong class="tag-gray">
+                        <img
+                          src="https://active.ridibooks.com/badge/on_book_cover/rent.55f7662fa2df580d2f5ab2d108660b82.png"
+                          alt="대여"
+                        />
+                      </strong>
+                    </div>
+                  </a>
+
+                  <div class="book-info">
+                    <a class="btn-ghost name" href="./index.html">
+                      <strong>뒤집기</strong>
+                    </a>
+
+                    <a class="btn-ghost author" href="./index.html">
+                      <strong>곽재식</strong>
+                    </a>
+
+                    <p class="review">
+                      <span class="star-rating">
+                        <i class="ic-star" aria-label="구매자 평균 별점"></i>
+                        <strong>4.0</strong>
+                      </span>
+
+                      <span class="review-count">
+                        (<strong aria-label="리뷰 10건">10</strong>)
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="slider-item">
+              <div class="book-card">
+                <a class="sm-only card-link" href="./index.html"></a>
+
+                <div class="card-content">
+                  <a class="book-image" href="./index.html">
+                    <img
+                      srcset="
+                        https://img.ridicdn.net/cover/4889000001/small?dpi=xhdpi#1  120w,
+                        https://img.ridicdn.net/cover/4889000001/large#1            165w,
+                        https://img.ridicdn.net/cover/4889000001/small?dpi=xxhdpi#1 180w,
+                        https://img.ridicdn.net/cover/4889000001/large?dpi=xhdpi#1  220w
+                      "
+                      sizes="(min-width: 768px) 180px, (max-width: 767px) 120px"
+                      src="https://img.ridicdn.net/cover/4889000001/small?dpi=xxhdpi#1"
+                      alt="친애하는 쇠고기"
+                    />
+
+                    <div class="tag-wrapper">
+                      <strong class="tag-red" aria-label="10% 할인">
+                        <img
+                          src="https://active.ridibooks.com/badge/on_book_cover/badge_1.c6669470315c0cfe1321b17f5dbb8d1e.png"
+                          alt=""
+                        />
+                        <img
+                          src="https://active.ridibooks.com/badge/on_book_cover/badge_0.923143bf7ef9b6939b5bec775b2c2eec.png"
+                          alt=""
+                        />
+                        <img
+                          src="https://active.ridibooks.com/badge/on_book_cover/percent.dc32752a61b84f21ffc7ed8e96d1961b.png"
+                          alt=""
+                        />
+                      </strong>
+
+                      <strong class="tag-gray">
+                        <img
+                          src="https://active.ridibooks.com/badge/on_book_cover/rent.55f7662fa2df580d2f5ab2d108660b82.png"
+                          alt="대여"
+                        />
+                      </strong>
+                    </div>
+                  </a>
+
+                  <div class="book-info">
+                    <a class="btn-ghost name" href="./index.html">
+                      <strong>친애하는 쇠고기</strong>
+                    </a>
+
+                    <a class="btn-ghost author" href="./index.html">
+                      <strong>김혜진</strong>
+                    </a>
+
+                    <p class="review">
+                      <span class="star-rating">
+                        <i class="ic-star" aria-label="구매자 평균 별점"></i>
+                        <strong>4.7</strong>
+                      </span>
+
+                      <span class="review-count">
+                        (<strong aria-label="리뷰 10건">10</strong>)
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="slider-item">
+              <div class="book-card">
+                <a class="sm-only card-link" href="./index.html"></a>
+
+                <div class="card-content">
+                  <a class="book-image" href="./index.html">
+                    <img
+                      srcset="
+                        https://img.ridicdn.net/cover/4581000004/small?dpi=xhdpi#1  120w,
+                        https://img.ridicdn.net/cover/4581000004/large#1            165w,
+                        https://img.ridicdn.net/cover/4581000004/small?dpi=xxhdpi#1 180w,
+                        https://img.ridicdn.net/cover/4581000004/large?dpi=xhdpi#1  220w
+                      "
+                      sizes="(min-width: 768px) 180px, (max-width: 767px) 120px"
+                      src="https://img.ridicdn.net/cover/4581000004/small?dpi=xxhdpi#1"
+                      alt="키스의 기원"
+                    />
+
+                    <div class="tag-wrapper">
+                      <strong class="tag-red" aria-label="10% 할인">
+                        <img
+                          src="https://active.ridibooks.com/badge/on_book_cover/badge_1.c6669470315c0cfe1321b17f5dbb8d1e.png"
+                          alt=""
+                        />
+                        <img
+                          src="https://active.ridibooks.com/badge/on_book_cover/badge_0.923143bf7ef9b6939b5bec775b2c2eec.png"
+                          alt=""
+                        />
+                        <img
+                          src="https://active.ridibooks.com/badge/on_book_cover/percent.dc32752a61b84f21ffc7ed8e96d1961b.png"
+                          alt=""
+                        />
+                      </strong>
+
+                      <strong class="tag-gray">
+                        <img
+                          src="https://active.ridibooks.com/badge/on_book_cover/rent.55f7662fa2df580d2f5ab2d108660b82.png"
+                          alt="대여"
+                        />
+                      </strong>
+                    </div>
+                  </a>
+
+                  <div class="book-info">
+                    <a class="btn-ghost name" href="./index.html">
+                      <strong>키스의 기원</strong>
+                    </a>
+
+                    <a class="btn-ghost author" href="./index.html">
+                      <strong>심너울</strong>
+                    </a>
+
+                    <p class="review">
+                      <span class="star-rating">
+                        <i class="ic-star" aria-label="구매자 평균 별점"></i>
+                        <strong>4.8</strong>
+                      </span>
+
+                      <span class="review-count">
+                        (<strong aria-label="리뷰 25건">25</strong>)
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="slider-item">
+              <div class="book-card">
+                <a class="sm-only card-link" href="./index.html"></a>
+
+                <div class="card-content">
+                  <a class="book-image" href="./index.html">
+                    <img
+                      srcset="
+                        https://img.ridicdn.net/cover/2189000206/small?dpi=xhdpi#1  120w,
+                        https://img.ridicdn.net/cover/2189000206/large#1            165w,
+                        https://img.ridicdn.net/cover/2189000206/small?dpi=xxhdpi#1 180w,
+                        https://img.ridicdn.net/cover/2189000206/large?dpi=xhdpi#1  220w
+                      "
+                      sizes="(min-width: 768px) 180px, (max-width: 767px) 120px"
+                      src="https://img.ridicdn.net/cover/2189000206/small?dpi=xxhdpi#1"
+                      alt="리더의 질문법"
+                    />
+
+                    <div class="tag-wrapper">
+                      <strong class="tag-red" aria-label="10% 할인">
+                        <img
+                          src="https://active.ridibooks.com/badge/on_book_cover/badge_1.c6669470315c0cfe1321b17f5dbb8d1e.png"
+                          alt=""
+                        />
+                        <img
+                          src="https://active.ridibooks.com/badge/on_book_cover/badge_0.923143bf7ef9b6939b5bec775b2c2eec.png"
+                          alt=""
+                        />
+                        <img
+                          src="https://active.ridibooks.com/badge/on_book_cover/percent.dc32752a61b84f21ffc7ed8e96d1961b.png"
+                          alt=""
+                        />
+                      </strong>
+                    </div>
+                  </a>
+
+                  <div class="book-info">
+                    <a class="btn-ghost name" href="./index.html">
+                      <strong>리더의 질문법</strong>
+                    </a>
+
+                    <a class="btn-ghost author" href="./index.html">
+                      <strong>에드거 샤인, 피터 샤인</strong>
+                    </a>
+
+                    <p class="review">
+                      <span class="star-rating">
+                        <i class="ic-star" aria-label="구매자 평균 별점"></i>
+                        <strong>5.0</strong>
+                      </span>
+
+                      <span class="review-count">
+                        (<strong aria-label="리뷰 1건">1</strong>)
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="slider-item">
+              <div class="book-card">
+                <a class="sm-only card-link" href="./index.html"></a>
+
+                <div class="card-content">
+                  <a class="book-image" href="./index.html">
+                    <img
+                      srcset="
+                        https://img.ridicdn.net/cover/4803001962/small?dpi=xhdpi#1  120w,
+                        https://img.ridicdn.net/cover/4803001962/large#1            165w,
+                        https://img.ridicdn.net/cover/4803001962/small?dpi=xxhdpi#1 180w,
+                        https://img.ridicdn.net/cover/4803001962/large?dpi=xhdpi#1  220w
+                      "
+                      sizes="(min-width: 768px) 180px, (max-width: 767px) 120px"
+                      src="https://img.ridicdn.net/cover/4803001962/small?dpi=xxhdpi#1"
+                      alt="기상청 사람들 1"
+                    />
+
+                    <div class="tag-wrapper">
+                      <strong class="tag-red" aria-label="10% 할인">
+                        <img
+                          src="https://active.ridibooks.com/badge/on_book_cover/badge_1.c6669470315c0cfe1321b17f5dbb8d1e.png"
+                          alt=""
+                        />
+                        <img
+                          src="https://active.ridibooks.com/badge/on_book_cover/badge_0.923143bf7ef9b6939b5bec775b2c2eec.png"
+                          alt=""
+                        />
+                        <img
+                          src="https://active.ridibooks.com/badge/on_book_cover/percent.dc32752a61b84f21ffc7ed8e96d1961b.png"
+                          alt=""
+                        />
+                      </strong>
+                    </div>
+                  </a>
+
+                  <div class="book-info">
+                    <a class="btn-ghost name" href="./index.html">
+                      <strong>기상청 사람들 1</strong>
+                    </a>
+
+                    <a class="btn-ghost author" href="./index.html">
+                      <strong>선영</strong>
+                    </a>
+
+                    <p class="review is-empty">
+                      <span class="star-rating">
+                        <i class="ic-star" aria-label="구매자 평균 별점"></i>
+                        <strong>0</strong>
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="slider-item">
+              <div class="book-card">
+                <a class="sm-only card-link" href="./index.html"></a>
+
+                <div class="card-content">
+                  <a class="book-image" href="./index.html">
+                    <img
+                      srcset="
+                        https://img.ridicdn.net/cover/862001286/small?dpi=xhdpi#1  120w,
+                        https://img.ridicdn.net/cover/862001286/large#1            165w,
+                        https://img.ridicdn.net/cover/862001286/small?dpi=xxhdpi#1 180w,
+                        https://img.ridicdn.net/cover/862001286/large?dpi=xhdpi#1  220w
+                      "
+                      sizes="(min-width: 768px) 180px, (max-width: 767px) 120px"
+                      src="https://img.ridicdn.net/cover/862001286/small?dpi=xxhdpi#1"
+                      alt="날씨가 좋으면 찾아가겠어요"
+                    />
+                  </a>
+
+                  <div class="book-info">
+                    <a class="btn-ghost name" href="./index.html">
+                      <strong>날씨가 좋으면 찾아가겠어요</strong>
+                    </a>
+
+                    <a class="btn-ghost author" href="./index.html">
+                      <strong>이도우</strong>
+                    </a>
+
+                    <p class="review">
+                      <span class="star-rating">
+                        <i class="ic-star" aria-label="구매자 평균 별점"></i>
+                        <strong>4.6</strong>
+                      </span>
+
+                      <span class="review-count">
+                        (<strong aria-label="리뷰 769건">769</strong>)
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="slider-item">
+              <div class="book-card">
+                <a class="sm-only card-link" href="./index.html"></a>
+
+                <div class="card-content">
+                  <a class="book-image" href="./index.html">
+                    <img
+                      srcset="
+                        https://img.ridicdn.net/cover/2416000066/small?dpi=xhdpi#1  120w,
+                        https://img.ridicdn.net/cover/2416000066/large#1            165w,
+                        https://img.ridicdn.net/cover/2416000066/small?dpi=xxhdpi#1 180w,
+                        https://img.ridicdn.net/cover/2416000066/large?dpi=xhdpi#1  220w
+                      "
+                      sizes="(min-width: 768px) 180px, (max-width: 767px) 120px"
+                      src="https://img.ridicdn.net/cover/2416000066/small?dpi=xxhdpi#1"
+                      alt="서른의 반격"
+                    />
+
+                    <div class="tag-wrapper">
+                      <strong class="tag-red" aria-label="10% 할인">
+                        <img
+                          src="https://active.ridibooks.com/badge/on_book_cover/badge_1.c6669470315c0cfe1321b17f5dbb8d1e.png"
+                          alt=""
+                        />
+                        <img
+                          src="https://active.ridibooks.com/badge/on_book_cover/badge_0.923143bf7ef9b6939b5bec775b2c2eec.png"
+                          alt=""
+                        />
+                        <img
+                          src="https://active.ridibooks.com/badge/on_book_cover/percent.dc32752a61b84f21ffc7ed8e96d1961b.png"
+                          alt=""
+                        />
+                      </strong>
+                    </div>
+                  </a>
+
+                  <div class="book-info">
+                    <a class="btn-ghost name" href="./index.html">
+                      <strong>서른의 반격</strong>
+                    </a>
+
+                    <a class="btn-ghost author" href="./index.html">
+                      <strong>손원평</strong>
+                    </a>
+
+                    <p class="review">
+                      <span class="star-rating">
+                        <i class="ic-star" aria-label="구매자 평균 별점"></i>
+                        <strong>4.1</strong>
+                      </span>
+
+                      <span class="review-count">
+                        (<strong aria-label="리뷰 210건">210</strong>)
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <div class="slider-controls">
+            <button
+              class="btn-40 control-button is-prev"
+              type="button"
+              aria-label="이전 이미지 보기"
+            >
+              <i class="ic-chevron" aria-hidden="true"></i>
+            </button>
+
+            <button
+              class="btn-40 control-button is-next"
+              type="button"
+              aria-label="다음 이미지 보기"
+            >
+              <i class="ic-chevron" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- %%%%%%%%%% MD's PICK 섹션 끝 %%%%%%%%%% -->
+
+      <!-- %%%%%%%%%% 리디북스토어 추천도서 섹션 시작 %%%%%%%%%% -->
+      <section class="book-list-section ridi-store">
+        <h1 class="section-title">
+          <a
+            class="btn-ghost"
+            href="./index.html"
+            aria-label="리디북스토어 추천도서 더보기"
+          >
+            리디북스토어 추천도서
+            <i class="ic-chevron" aria-hidden="true"></i>
+          </a>
+        </h1>
+
+        <div class="ridi-store-carousel">
+          <ul class="slider-list">
+            <li class="slider-item">
+              <div class="book-card">
+                <a class="sm-only card-link" href="./index.html"></a>
+
+                <div class="card-content">
+                  <a class="book-image" href="./index.html">
+                    <img
+                      srcset="
+                        https://img.ridicdn.net/cover/754024947/small?dpi=xhdpi#1  120w,
+                        https://img.ridicdn.net/cover/754024947/large#1            165w,
+                        https://img.ridicdn.net/cover/754024947/small?dpi=xxhdpi#1 180w,
+                        https://img.ridicdn.net/cover/754024947/large?dpi=xhdpi#1  220w
+                      "
+                      sizes="(min-width: 768px) 180px, (max-width: 767px) 120px"
+                      src="https://img.ridicdn.net/cover/754024947/small?dpi=xxhdpi#1"
+                      alt="옥상에서 만나요"
+                    />
+                  </a>
+
+                  <div class="book-info">
+                    <a class="btn-ghost name" href="./index.html">
+                      <strong>옥상에서 만나요</strong>
+                    </a>
+
+                    <a class="btn-ghost author" href="./index.html">
+                      <strong>정세랑</strong>
+                    </a>
+
+                    <p class="review">
+                      <span class="star-rating">
+                        <i class="ic-star" aria-label="구매자 평균 별점"></i>
+                        <strong>4.5</strong>
+                      </span>
+
+                      <span class="review-count">
+                        (<strong aria-label="리뷰 153건">153</strong>)
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="slider-item">
+              <div class="book-card">
+                <a class="sm-only card-link" href="./index.html"></a>
+
+                <div class="card-content">
+                  <a class="book-image" href="./index.html">
+                    <img
+                      srcset="
+                        https://img.ridicdn.net/cover/606002174/small?dpi=xhdpi#1  120w,
+                        https://img.ridicdn.net/cover/606002174/large#1            165w,
+                        https://img.ridicdn.net/cover/606002174/small?dpi=xxhdpi#1 180w,
+                        https://img.ridicdn.net/cover/606002174/large?dpi=xhdpi#1  220w
+                      "
+                      src="https://img.ridicdn.net/cover/606002174/small?dpi=xxhdpi#1"
+                      sizes="(min-width: 768px) 180px, (max-width: 767px) 120px"
+                      alt="내가 너의 첫 문장이었을 때"
+                    />
+
+                    <div class="tag-wrapper">
+                      <strong class="tag-yellow">
+                        <img
+                          src="https://active.ridibooks.com/badge/on_book_cover/select.ee5de832ef4cb5a7680ca83c2527fac8.png"
+                          alt="리디 셀렉트"
+                        />
+                      </strong>
+                    </div>
+                  </a>
+
+                  <div class="book-info">
+                    <a class="btn-ghost name" href="./index.html">
+                      <strong>내가 너의 첫 문장이었을 때</strong>
+                    </a>
+
+                    <a class="btn-ghost author" href="./index.html">
+                      <strong>
+                        김민섭, 김혼비, 남궁인, 문보영, 오은, 이은정, 정지우
+                      </strong>
+                    </a>
+
+                    <p class="review">
+                      <span class="star-rating">
+                        <i class="ic-star" aria-label="구매자 평균 별점"></i>
+                        <strong>4.1</strong>
+                      </span>
+
+                      <span class="review-count">
+                        (<strong aria-label="리뷰 22건">22</strong>)
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="slider-item">
+              <div class="book-card">
+                <a class="sm-only card-link" href="./index.html"></a>
+
+                <div class="card-content">
+                  <a class="book-image" href="./index.html">
+                    <img
+                      srcset="
+                        https://img.ridicdn.net/cover/371002440/small?dpi=xhdpi#1  120w,
+                        https://img.ridicdn.net/cover/371002440/large#1            165w,
+                        https://img.ridicdn.net/cover/371002440/small?dpi=xxhdpi#1 180w,
+                        https://img.ridicdn.net/cover/371002440/large?dpi=xhdpi#1  220w
+                      "
+                      sizes="(min-width: 768px) 180px, (max-width: 767px) 120px"
+                      src="https://img.ridicdn.net/cover/371002440/small?dpi=xxhdpi#1"
+                      alt="밝은 밤"
+                    />
+                  </a>
+
+                  <div class="book-info">
+                    <a class="btn-ghost name" href="./index.html">
+                      <strong>밝은 밤</strong>
+                    </a>
+
+                    <a class="btn-ghost author" href="./index.html">
+                      <strong>최은영</strong>
+                    </a>
+
+                    <p class="review">
+                      <span class="star-rating">
+                        <i class="ic-star" aria-label="구매자 평균 별점"></i>
+                        <strong>4.9</strong>
+                      </span>
+
+                      <span class="review-count">
+                        (<strong aria-label="리뷰 232건">232</strong>)
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="slider-item">
+              <div class="book-card">
+                <a class="sm-only card-link" href="./index.html"></a>
+
+                <div class="card-content">
+                  <a class="book-image" href="./index.html">
+                    <img
+                      srcset="
+                        https://img.ridicdn.net/cover/754028361/small?dpi=xhdpi#1  120w,
+                        https://img.ridicdn.net/cover/754028361/large#1            165w,
+                        https://img.ridicdn.net/cover/754028361/small?dpi=xxhdpi#1 180w,
+                        https://img.ridicdn.net/cover/754028361/large?dpi=xhdpi#1  220w
+                      "
+                      sizes="(min-width: 768px) 180px, (max-width: 767px) 120px"
+                      src="https://img.ridicdn.net/cover/754028361/small?dpi=xxhdpi#1"
+                      alt="알로하, 나의 엄마들"
+                    />
+                  </a>
+
+                  <div class="book-info">
+                    <a class="btn-ghost name" href="./index.html">
+                      <strong>알로하, 나의 엄마들</strong>
+                    </a>
+
+                    <a class="btn-ghost author" href="./index.html">
+                      <strong>이금이</strong>
+                    </a>
+
+                    <p class="review">
+                      <span class="star-rating">
+                        <i class="ic-star" aria-label="구매자 평균 별점"></i>
+                        <strong>4.8</strong>
+                      </span>
+
+                      <span class="review-count">
+                        (<strong aria-label="리뷰 229건">229</strong>)
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="slider-item">
+              <div class="book-card">
+                <a class="sm-only card-link" href="./index.html"></a>
+
+                <div class="card-content">
+                  <a class="book-image" href="./index.html">
+                    <img
+                      srcset="
+                        https://img.ridicdn.net/cover/852001242/small?dpi=xhdpi#1  120w,
+                        https://img.ridicdn.net/cover/852001242/large#1            165w,
+                        https://img.ridicdn.net/cover/852001242/small?dpi=xxhdpi#1 180w,
+                        https://img.ridicdn.net/cover/852001242/large?dpi=xhdpi#1  220w
+                      "
+                      sizes="(min-width: 768px) 180px, (max-width: 767px) 120px"
+                      src="https://img.ridicdn.net/cover/852001242/small?dpi=xxhdpi#1"
+                      alt="어서 오세요, 휴남동 서점입니다"
+                    />
+                  </a>
+
+                  <div class="book-info">
+                    <a class="btn-ghost name" href="./index.html">
+                      <strong>어서 오세요, 휴남동 서점입니다</strong>
+                    </a>
+
+                    <a class="btn-ghost author" href="./index.html">
+                      <strong>황보름</strong>
+                    </a>
+
+                    <p class="review">
+                      <span class="star-rating">
+                        <i class="ic-star" aria-label="구매자 평균 별점"></i>
+                        <strong>4.7</strong>
+                      </span>
+
+                      <span class="review-count">
+                        (<strong aria-label="리뷰 74건">74</strong>)
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="slider-item">
+              <div class="book-card">
+                <a class="sm-only card-link" href="./index.html"></a>
+
+                <div class="card-content">
+                  <a class="book-image" href="./index.html">
+                    <img
+                      srcset="
+                        https://img.ridicdn.net/cover/862001286/small?dpi=xhdpi#1  120w,
+                        https://img.ridicdn.net/cover/862001286/large#1            165w,
+                        https://img.ridicdn.net/cover/862001286/small?dpi=xxhdpi#1 180w,
+                        https://img.ridicdn.net/cover/862001286/large?dpi=xhdpi#1  220w
+                      "
+                      sizes="(min-width: 768px) 180px, (max-width: 767px) 120px"
+                      src="https://img.ridicdn.net/cover/862001286/small?dpi=xxhdpi#1"
+                      alt="날씨가 좋으면 찾아가겠어요"
+                    />
+                  </a>
+
+                  <div class="book-info">
+                    <a class="btn-ghost name" href="./index.html">
+                      <strong>날씨가 좋으면 찾아가겠어요</strong>
+                    </a>
+
+                    <a class="btn-ghost author" href="./index.html">
+                      <strong>이도우</strong>
+                    </a>
+
+                    <p class="review">
+                      <span class="star-rating">
+                        <i class="ic-star" aria-label="구매자 평균 별점"></i>
+                        <strong>4.6</strong>
+                      </span>
+
+                      <span class="review-count">
+                        (<strong aria-label="리뷰 769건">769</strong>)
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="slider-item">
+              <div class="book-card">
+                <a class="sm-only card-link" href="./index.html"></a>
+
+                <div class="card-content">
+                  <a class="book-image" href="./index.html">
+                    <img
+                      srcset="
+                        https://img.ridicdn.net/cover/222002566/small?dpi=xhdpi#1  120w,
+                        https://img.ridicdn.net/cover/222002566/large#1            165w,
+                        https://img.ridicdn.net/cover/222002566/small?dpi=xxhdpi#1 180w,
+                        https://img.ridicdn.net/cover/222002566/large?dpi=xhdpi#1  220w
+                      "
+                      sizes="(min-width: 768px) 180px, (max-width: 767px) 120px"
+                      src="https://img.ridicdn.net/cover/222002566/small?dpi=xxhdpi#1"
+                      alt="착해지는 기분이 들어"
+                    />
+
+                    <div class="tag-wrapper">
+                      <strong class="tag-yellow">
+                        <img
+                          src="https://active.ridibooks.com/badge/on_book_cover/select.ee5de832ef4cb5a7680ca83c2527fac8.png"
+                          alt="리디 셀렉트"
+                        />
+                      </strong>
+                    </div>
+                  </a>
+
+                  <div class="book-info">
+                    <a class="btn-ghost name" href="./index.html">
+                      <strong>착해지는 기분이 들어</strong>
+                    </a>
+
+                    <a class="btn-ghost author" href="./index.html">
+                      <strong>이은선</strong>
+                    </a>
+
+                    <p class="review">
+                      <span class="star-rating">
+                        <i class="ic-star" aria-label="구매자 평균 별점"></i>
+                        <strong>4.4</strong>
+                      </span>
+
+                      <span class="review-count">
+                        (<strong aria-label="리뷰 12건">12</strong>)
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="slider-item">
+              <div class="book-card">
+                <a class="sm-only card-link" href="./index.html"></a>
+
+                <div class="card-content">
+                  <a class="book-image" href="./index.html">
+                    <img
+                      srcset="
+                        https://img.ridicdn.net/cover/2416000138/small?dpi=xhdpi#1  120w,
+                        https://img.ridicdn.net/cover/2416000138/large#1            165w,
+                        https://img.ridicdn.net/cover/2416000138/small?dpi=xxhdpi#1 180w,
+                        https://img.ridicdn.net/cover/2416000138/large?dpi=xhdpi#1  220w
+                      "
+                      sizes="(min-width: 768px) 180px, (max-width: 767px) 120px"
+                      src="https://img.ridicdn.net/cover/2416000138/small?dpi=xxhdpi#1"
+                      alt="GV 빌런 고태경"
+                    />
+
+                    <div class="tag-wrapper">
+                      <strong class="tag-yellow">
+                        <img
+                          src="https://active.ridibooks.com/badge/on_book_cover/select.ee5de832ef4cb5a7680ca83c2527fac8.png"
+                          alt="리디 셀렉트"
+                        />
+                      </strong>
+                    </div>
+                  </a>
+
+                  <div class="book-info">
+                    <a class="btn-ghost name" href="./index.html">
+                      <strong>GV 빌런 고태경</strong>
+                    </a>
+
+                    <a class="btn-ghost author" href="./index.html">
+                      <strong>정대건</strong>
+                    </a>
+
+                    <p class="review">
+                      <span class="star-rating">
+                        <i class="ic-star" aria-label="구매자 평균 별점"></i>
+                        <strong>4.7</strong>
+                      </span>
+
+                      <span class="review-count">
+                        (<strong aria-label="리뷰 246건">246</strong>)
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="slider-item">
+              <div class="book-card">
+                <a class="sm-only card-link" href="./index.html"></a>
+
+                <div class="card-content">
+                  <a class="book-image" href="./index.html">
+                    <img
+                      srcset="
+                        https://img.ridicdn.net/cover/852001025/small?dpi=xhdpi#1  120w,
+                        https://img.ridicdn.net/cover/852001025/large#1            165w,
+                        https://img.ridicdn.net/cover/852001025/small?dpi=xxhdpi#1 180w,
+                        https://img.ridicdn.net/cover/852001025/large?dpi=xhdpi#1  220w
+                      "
+                      sizes="(min-width: 768px) 180px, (max-width: 767px) 120px"
+                      src="https://img.ridicdn.net/cover/852001025/small?dpi=xxhdpi#1"
+                      alt="아무튼, 장국영"
+                    />
+
+                    <div class="tag-wrapper">
+                      <strong class="tag-yellow">
+                        <img
+                          src="https://active.ridibooks.com/badge/on_book_cover/select.ee5de832ef4cb5a7680ca83c2527fac8.png"
+                          alt="리디 셀렉트"
+                        />
+                      </strong>
+                    </div>
+                  </a>
+
+                  <div class="book-info">
+                    <a class="btn-ghost name" href="./index.html">
+                      <strong>아무튼, 장국영</strong>
+                    </a>
+
+                    <a class="btn-ghost author" href="./index.html">
+                      <strong>오유정</strong>
+                    </a>
+
+                    <p class="review">
+                      <span class="star-rating">
+                        <i class="ic-star" aria-label="구매자 평균 별점"></i>
+                        <strong>4.3</strong>
+                      </span>
+
+                      <span class="review-count">
+                        (<strong aria-label="리뷰 26건">26</strong>)
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="slider-item">
+              <div class="book-card">
+                <a class="sm-only card-link" href="./index.html"></a>
+
+                <div class="card-content">
+                  <a class="book-image" href="./index.html">
+                    <img
+                      srcset="
+                        https://img.ridicdn.net/cover/1546000913/small?dpi=xhdpi#1  120w,
+                        https://img.ridicdn.net/cover/1546000913/large#1            165w,
+                        https://img.ridicdn.net/cover/1546000913/small?dpi=xxhdpi#1 180w,
+                        https://img.ridicdn.net/cover/1546000913/large?dpi=xhdpi#1  220w
+                      "
+                      sizes="(min-width: 768px) 180px, (max-width: 767px) 120px"
+                      src="https://img.ridicdn.net/cover/1546000913/small?dpi=xxhdpi#1"
+                      alt="우리는 여전히 삶을 사랑하는가"
+                    />
+
+                    <div class="tag-wrapper">
+                      <strong class="tag-red" aria-label="10% 할인">
+                        <img
+                          src="https://active.ridibooks.com/badge/on_book_cover/badge_1.c6669470315c0cfe1321b17f5dbb8d1e.png"
+                          alt=""
+                        />
+                        <img
+                          src="https://active.ridibooks.com/badge/on_book_cover/badge_0.923143bf7ef9b6939b5bec775b2c2eec.png"
+                          alt=""
+                        />
+                        <img
+                          src="https://active.ridibooks.com/badge/on_book_cover/percent.dc32752a61b84f21ffc7ed8e96d1961b.png"
+                          alt=""
+                        />
+                      </strong>
+                    </div>
+                  </a>
+
+                  <div class="book-info">
+                    <a class="btn-ghost name" href="./index.html">
+                      <strong>우리는 여전히 삶을 사랑하는가</strong>
+                    </a>
+
+                    <a class="btn-ghost author" href="./index.html">
+                      <strong>에리히 프롬</strong>
+                    </a>
+
+                    <p class="review">
+                      <span class="star-rating">
+                        <i class="ic-star" aria-label="구매자 평균 별점"></i>
+                        <strong>4.2</strong>
+                      </span>
+
+                      <span class="review-count">
+                        (<strong aria-label="리뷰 6건">6</strong>)
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="slider-item">
+              <div class="book-card">
+                <a class="sm-only card-link" href="./index.html"></a>
+
+                <div class="card-content">
+                  <a class="book-image" href="./index.html">
+                    <img
+                      srcset="
+                        https://img.ridicdn.net/cover/509001492/small?dpi=xhdpi#1  120w,
+                        https://img.ridicdn.net/cover/509001492/large#1            165w,
+                        https://img.ridicdn.net/cover/509001492/small?dpi=xxhdpi#1 180w,
+                        https://img.ridicdn.net/cover/509001492/large?dpi=xhdpi#1  220w
+                      "
+                      sizes="(min-width: 768px) 180px, (max-width: 767px) 120px"
+                      src="https://img.ridicdn.net/cover/509001492/small?dpi=xxhdpi#1"
+                      alt="젊은 ADHD의 슬픔"
+                    />
+                  </a>
+
+                  <div class="book-info">
+                    <a class="btn-ghost name" href="./index.html">
+                      <strong>젊은 ADHD의 슬픔</strong>
+                    </a>
+
+                    <a class="btn-ghost author" href="./index.html">
+                      <strong>정지음</strong>
+                    </a>
+
+                    <p class="review">
+                      <span class="star-rating">
+                        <i class="ic-star" aria-label="구매자 평균 별점"></i>
+                        <strong>4.5</strong>
+                      </span>
+
+                      <span class="review-count">
+                        (<strong aria-label="리뷰 181건">181</strong>)
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <div class="slider-controls">
+            <button
+              class="btn-40 control-button is-prev"
+              type="button"
+              aria-label="이전 이미지 보기"
+            >
+              <i class="ic-chevron" aria-hidden="true"></i>
+            </button>
+
+            <button
+              class="btn-40 control-button is-next"
+              type="button"
+              aria-label="다음 이미지 보기"
+            >
+              <i class="ic-chevron" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- %%%%%%%%%% 리디북스토어 추천도서 섹션 끝 %%%%%%%%%% -->
+    </main>
+
+    <!-- ########## FOOTER 영역 끝 ########## -->
+    <footer class="global-footer">
+      <div class="container">
+        <ul class="sm-only link-list">
+          <li class="link-item">
+            <a class="btn-ghost" href="./index.html">
+              <i class="ic-service" aria-hidden="true"></i>고객센터
+            </a>
+          </li>
+          <li class="link-item">
+            <a class="btn-ghost" href="./index.html">
+              <i class="ic-speaker" aria-hidden="true"></i>공지사항
+            </a>
+          </li>
+        </ul>
+
+        <nav class="footer-nav">
+          <h2 class="visually-hidden">푸터 메뉴</h2>
+
+          <div class="sm-hidden nav-main">
+            <h3 class="visually-hidden">메인</h3>
+
+            <ul class="link-list">
+              <li class="link-item">
+                <a class="btn-ghost" href="./index.html">
+                  <i class="ic-service" aria-hidden="true"></i>고객센터
+                </a>
+              </li>
+              <li class="link-item">
+                <a class="btn-ghost" href="./index.html">
+                  <i class="ic-speaker" aria-hidden="true"></i>공지사항
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="nav-service">
+            <h3 class="title">서비스</h3>
+
+            <ul class="link-list">
+              <li class="link-item">
+                <a class="btn-ghost" href="./index.html">리디페이퍼</a>
+              </li>
+              <li class="link-item">
+                <a class="btn-ghost" href="./index.html">제휴카드</a>
+              </li>
+              <li class="link-item">
+                <a class="btn-ghost" href="./index.html">뷰어 다운로드</a>
+              </li>
+              <li class="link-item">
+                <a class="btn-ghost" href="./index.html">CP사이트</a>
+              </li>
+              <li class="link-item">
+                <a class="btn-ghost" href="./index.html">리디셀렉트 B2B</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="nav-inquiry">
+            <h3 class="title">기타 문의</h3>
+
+            <ul class="link-list">
+              <li class="link-item">
+                <a class="btn-ghost" href="./index.html">콘텐츠 제공 문의</a>
+              </li>
+              <li class="link-item">
+                <a class="btn-ghost" href="./index.html">사업 제휴 문의</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="nav-company">
+            <h3 class="title">회사</h3>
+
+            <ul class="link-list">
+              <li class="link-item">
+                <a class="btn-ghost" href="./index.html">회사 소개</a>
+              </li>
+              <li class="link-item">
+                <a class="btn-ghost" href="./index.html">
+                  인재채용
+                  <strong
+                    class="badge is-new"
+                    aria-label="신규 채용 공고 업데이트"
+                  >
+                    N
+                  </strong>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <div class="footer-info">
+          <div class="details">
+            <button class="details-control-button" type="button">
+              리디(주) 사업자 정보
+              <i class="ic-chevron"></i>
+            </button>
+
+            <dl>
+              <div>
+                <dt>대표자</dt>
+                <dd>배기식</dd>
+              </div>
+              <div>
+                <dt>사업자 등록번호</dt>
+                <dd>20-87-27435</dd>
+              </div>
+              <div class="detail">
+                <dt>통신판매업 신고번호</dt>
+                <dd>제 2009-서울강남 35-02139호</dd>
+              </div>
+              <div>
+                <dt>이메일</dt>
+                <dd><a href="mailto:help@ridi.com">help@ridi.com</a></dd>
+              </div>
+              <div>
+                <dt>대표전화</dt>
+                <dd><a href="tel:1644-0331">1644-0331</a></dd>
+              </div>
+              <div>
+                <dt>주소</dt>
+                <dd>
+                  서울시 강남구 역삼동 702-28 어반벤치빌딩 10층(테헤란로 325)
+                </dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="policy">
+            <a class="btn-ghost" href="./index.html">이용약관</a>
+            <a class="btn-ghost" href="./index.html">개인정보 처리방침</a>
+            <a class="btn-ghost" href="./index.html">청소년보호정책</a>
+            <a class="btn-ghost" href="./index.html">사업자정보확인</a>
+          </div>
+
+          <div class="copyright">
+            <span aria-label="copyright by">&copy;</span>
+            <strong>RIDI Corp.</strong>
+          </div>
+        </div>
+
+        <div class="footer-contact">
+          <a
+            class="btn-44 btn-outlined"
+            href="./index.html"
+            aria-label="리디 페이스북 페이지로 이동"
+          >
+            <i class="ic-facebook" aria-hidden="true"></i>
+          </a>
+
+          <a
+            class="btn-44 btn-outlined"
+            href="./index.html"
+            aria-label="리디 인스타 페이지로 이동"
+          >
+            <i class="ic-insta" aria-hidden="true"></i>
+          </a>
+
+          <a
+            class="btn-44 btn-outlined"
+            href="./index.html"
+            aria-label="리디 유튜브 페이지로 이동"
+          >
+            <i class="ic-youtube" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+    <!-- ########## FOOTER 영역 끝 ########## -->
+    <!-- !!!!!!!!!!########## 전체 페이지 영역 끝 ##########!!!!!!!!!! -->
+  </body>
+</html>
